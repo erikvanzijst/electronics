@@ -17,5 +17,5 @@ The direction is determined by counter's 4th, most significant bit fed into the 
 
 The side effect of switching using one's complement is that we count 0-7, followed by 7-0. Thus value 7 and 0 each last 2 clock cycles. This is because 111 is the highest positive value (7), after which the counter cycles to 000 with the MSB triggering the selection of the inverted signal on which 000 is 111 for another pulse.
 
-!(knightrider-1.jpg)
-!(knightrider-1-1.jpg)
+![](knightrider-1.jpg)
+![](knightrider-1-1.jpg)
