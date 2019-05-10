@@ -1,4 +1,4 @@
-Knight Rider style sweeping LED using:
+Knight Rider LEDs Part 1 (Breadboard)
 --------------------------
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/yOqT7gJiIEw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
