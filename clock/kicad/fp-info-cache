@@ -1,4 +1,4 @@
-16665571391558584
+16665571561063584
 Battery
 BatteryHolder_Bulgin_BX0036_1xC
 Bulgin Battery Holder, BX0036, Battery Type C (https://www.bulgin.com/products/pub/media/bulgin/data/Battery_holders.pdf)
@@ -118091,6 +118091,20 @@ Texas_RGE0024H_EP2.7x2.7mm
 0
 KiCad
 Texas_RGE0024H_EP2.7x2.7mm_ThermalVias
+
+
+0
+0
+0
+KiCad
+Texas_RGY_R-PVQFN-N24_EP2.05x3.1mm
+
+
+0
+0
+0
+KiCad
+Texas_RGY_R-PVQFN-N24_EP2.05x3.1mm_ThermalVias
 
 
 0

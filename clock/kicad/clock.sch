@@ -1248,12 +1248,12 @@ Wire Wire Line
 $Comp
 L power:VCC #PWR014
 U 1 1 5D45B0C8
-P 7100 7950
-F 0 "#PWR014" H 7100 7800 50  0001 C CNN
-F 1 "VCC" H 7117 8123 50  0000 C CNN
-F 2 "" H 7100 7950 50  0001 C CNN
-F 3 "" H 7100 7950 50  0001 C CNN
-	1    7100 7950
+P 7100 7850
+F 0 "#PWR014" H 7100 7700 50  0001 C CNN
+F 1 "VCC" H 7117 8023 50  0000 C CNN
+F 2 "" H 7100 7850 50  0001 C CNN
+F 3 "" H 7100 7850 50  0001 C CNN
+	1    7100 7850
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -1282,8 +1282,6 @@ Wire Wire Line
 	6450 9500 7200 9500
 Wire Wire Line
 	7100 9100 7100 9200
-Wire Wire Line
-	7100 7950 7100 8050
 Wire Wire Line
 	7500 9200 7500 9300
 Text GLabel 6800 8800 0    50   Input ~ 0
@@ -1558,8 +1556,6 @@ Wire Wire Line
 Wire Wire Line
 	5200 8900 5300 8900
 Connection ~ 5200 6050
-Text GLabel 6300 7400 2    50   Input ~ 0
-VCC
 Text GLabel 5200 7400 0    50   Input ~ 0
 GND
 Wire Wire Line
@@ -1885,7 +1881,7 @@ Wire Wire Line
 	1800 6200 1800 6500
 Wire Wire Line
 	1350 7400 2850 7400
-Text GLabel 3150 5400 3    50   Input ~ 0
+Text GLabel 3150 5400 0    50   Input ~ 0
 GND
 Text GLabel 3950 5400 2    50   Input ~ 0
 VCC
@@ -1931,17 +1927,6 @@ Wire Wire Line
 	3100 6800 3100 6700
 Connection ~ 3100 6700
 NoConn ~ 3800 5700
-$Comp
-L clock:74HC14 U20
-U 1 1 5DD6A2C2
-P 3550 5400
-F 0 "U20" H 3400 5750 50  0000 C CNN
-F 1 "74HC14" H 3750 5750 50  0000 C CNN
-F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 3550 5400 50  0001 C CNN
-F 3 "" H 3550 5400 50  0001 C CNN
-	1    3550 5400
-	0    1    1    0   
-$EndComp
 Text GLabel 2900 7150 0    50   Input ~ 0
 GND
 Text GLabel 4250 7150 2    50   Input ~ 0
@@ -1973,8 +1958,6 @@ Wire Wire Line
 Wire Wire Line
 	3600 3300 3600 5100
 Connection ~ 5100 3300
-Wire Wire Line
-	3600 5700 3600 5850
 Text GLabel 3800 5100 2    50   Input ~ 0
 GND
 Wire Wire Line
@@ -2008,10 +1991,6 @@ Wire Wire Line
 Wire Wire Line
 	3600 6400 3500 6400
 Wire Wire Line
-	3600 5850 3700 5850
-Wire Wire Line
-	3700 5850 3700 6800
-Wire Wire Line
 	3400 5950 3800 5950
 Wire Wire Line
 	3800 5950 3800 6800
@@ -2022,8 +2001,6 @@ Wire Wire Line
 Wire Wire Line
 	3700 5750 3550 5750
 Wire Wire Line
-	3550 5750 3550 6700
-Wire Wire Line
 	3550 6700 3500 6700
 Wire Wire Line
 	3500 6700 3500 6800
@@ -2031,4 +2008,85 @@ Wire Wire Line
 	2900 7150 2900 6700
 Wire Wire Line
 	2900 6700 3100 6700
+$Comp
+L power:VCC #PWR0101
+U 1 1 5D33EDBB
+P 6300 7200
+F 0 "#PWR0101" H 6300 7050 50  0001 C CNN
+F 1 "VCC" H 6317 7373 50  0000 C CNN
+F 2 "" H 6300 7200 50  0001 C CNN
+F 3 "" H 6300 7200 50  0001 C CNN
+	1    6300 7200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6300 7200 6300 7400
+Wire Wire Line
+	7100 7850 7100 8050
+Wire Wire Line
+	3700 6800 3700 5850
+Wire Wire Line
+	3700 5850 3600 5850
+Wire Wire Line
+	3600 5850 3600 5700
+$Comp
+L Connector:Jack-DC J1
+U 1 1 5D0C7F55
+P 1950 8150
+F 0 "J1" H 2007 8475 50  0000 C CNN
+F 1 "Jack-DC" H 2007 8384 50  0000 C CNN
+F 2 "KiCad:BarrelJack_CUI_PJ-063AH_Horizontal" H 2000 8110 50  0001 C CNN
+F 3 "~" H 2000 8110 50  0001 C CNN
+	1    1950 8150
+	1    0    0    -1  
+$EndComp
+Text GLabel 2500 8050 2    50   Input ~ 0
+VCC
+Text GLabel 2500 8250 2    50   Input ~ 0
+GND
+Wire Wire Line
+	2500 8050 2450 8050
+Wire Wire Line
+	2250 8250 2450 8250
+$Comp
+L power:PWR_FLAG #FLG0101
+U 1 1 5D14D41D
+P 2450 8050
+F 0 "#FLG0101" H 2450 8125 50  0001 C CNN
+F 1 "PWR_FLAG" H 2450 8223 50  0000 C CNN
+F 2 "" H 2450 8050 50  0001 C CNN
+F 3 "~" H 2450 8050 50  0001 C CNN
+	1    2450 8050
+	1    0    0    -1  
+$EndComp
+Connection ~ 2450 8050
+Wire Wire Line
+	2450 8050 2250 8050
+$Comp
+L power:PWR_FLAG #FLG0102
+U 1 1 5D2210FE
+P 2450 8250
+F 0 "#FLG0102" H 2450 8325 50  0001 C CNN
+F 1 "PWR_FLAG" H 2450 8423 50  0000 C CNN
+F 2 "" H 2450 8250 50  0001 C CNN
+F 3 "~" H 2450 8250 50  0001 C CNN
+	1    2450 8250
+	-1   0    0    1   
+$EndComp
+Connection ~ 2450 8250
+Wire Wire Line
+	2450 8250 2500 8250
+Wire Wire Line
+	3550 5750 3550 6700
+$Comp
+L clock:74HC14 U20
+U 1 1 5DD6A2C2
+P 3550 5400
+F 0 "U20" H 3400 5750 50  0000 C CNN
+F 1 "74HC14" H 3750 5750 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 3550 5400 50  0001 C CNN
+F 3 "" H 3550 5400 50  0001 C CNN
+	1    3550 5400
+	0    1    1    0   
+$EndComp
 $EndSCHEMATC
