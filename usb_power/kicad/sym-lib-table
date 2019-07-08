@@ -1,0 +1,4 @@
+(sym_lib_table
+  (lib (name usb_power)(type Legacy)(uri ${KIPRJMOD}/usb_power.lib)(options "")(descr ""))
+  (lib (name clock)(type Legacy)(uri /Users/evzijst/work/electronics/clock/kicad/clock.lib)(options "")(descr ""))
+)
