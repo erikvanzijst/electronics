@@ -99,6 +99,29 @@ X F 9 -300 -200 100 R 50 50 1 1 I
 ENDDRAW
 ENDDEF
 #
+# Sensor_Optical_VT93xx
+#
+DEF Sensor_Optical_VT93xx R 0 0 N Y 1 F N
+F0 "R" -200 0 50 V V C CNN
+F1 "Sensor_Optical_VT93xx" 75 0 50 V V C TNN
+F2 "OptoDevice:R_LDR_4.9x4.2mm_P2.54mm_Vertical" 175 0 50 V I C CNN
+F3 "" 0 -50 50 H I C CNN
+$FPLIST
+ R*LDR*4.9x4.2mm*P2.54mm*
+$ENDFPLIST
+DRAW
+S -40 100 40 -100 0 1 10 N
+P 2 0 1 0 -60 -90 -160 10 N
+P 2 0 1 0 -60 -90 -90 -90 N
+P 2 0 1 0 -60 -90 -60 -60 N
+P 2 0 1 0 -60 -30 -160 70 N
+P 2 0 1 0 -60 -30 -90 -30 N
+P 2 0 1 0 -60 -30 -60 0 N
+X ~ 1 0 150 50 D 50 50 1 1 P
+X ~ 2 0 -150 50 U 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
 # Switch_SW_Push
 #
 DEF Switch_SW_Push SW 0 40 N N 1 F N
@@ -113,6 +136,30 @@ P 2 0 1 0 0 50 0 120 N
 P 2 0 1 0 100 50 -100 50 N
 X 1 1 -200 0 100 R 50 50 0 1 P
 X 2 2 200 0 100 L 50 50 0 1 P
+ENDDRAW
+ENDDEF
+#
+# Transistor_BJT_PN2222A
+#
+DEF Transistor_BJT_PN2222A Q 0 0 Y N 1 F N
+F0 "Q" 200 75 50 H V L CNN
+F1 "Transistor_BJT_PN2222A" 200 0 50 H V L CNN
+F2 "Package_TO_SOT_THT:TO-92_Inline" 200 -75 50 H I L CIN
+F3 "" 0 0 50 H I L CNN
+$FPLIST
+ TO?92*
+$ENDFPLIST
+DRAW
+C 50 0 111 0 1 10 N
+P 2 0 1 0 0 0 25 0 N
+P 2 0 1 0 100 -100 25 -25 N
+P 2 0 1 0 100 100 25 25 N
+P 3 0 1 20 25 75 25 -75 25 -75 N
+P 3 0 1 0 95 -95 75 -75 75 -75 N
+P 5 0 1 0 45 -65 65 -45 85 -85 45 -65 45 -65 F
+X E 1 100 -200 100 U 50 50 1 1 P
+X B 2 -200 0 200 R 50 50 1 1 I
+X C 3 100 200 100 D 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
@@ -318,6 +365,35 @@ X D- 2 300 0 100 L 50 50 1 1 P
 X D+ 3 300 100 100 L 50 50 1 1 P
 X GND 4 300 200 100 L 50 50 1 1 P
 X SHELL 5 100 -300 100 U 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+# dk_Clock-Timing-Programmable-Timers-and-Oscillators_NE555P
+#
+DEF dk_Clock-Timing-Programmable-Timers-and-Oscillators_NE555P U 0 40 Y Y 1 F N
+F0 "U" -350 250 60 H V L CNN
+F1 "dk_Clock-Timing-Programmable-Timers-and-Oscillators_NE555P" 50 -350 60 H V L CNN
+F2 "digikey-footprints:DIP-8_W7.62mm" 200 200 60 H I L CNN
+F3 "http://www.ti.com/general/docs/suppproductinfo.tsp?distId=10&gotoUrl=http%3A%2F%2Fwww.ti.com%2Flit%2Fgpn%2Fne555" 200 300 60 H I L CNN
+F4 "296-1411-5-ND" 200 400 60 H I L CNN "Digi-Key_PN"
+F5 "NE555P" 200 500 60 H I L CNN "MPN"
+F6 "Integrated Circuits (ICs)" 200 600 60 H I L CNN "Category"
+F7 "Clock/Timing - Programmable Timers and Oscillators" 200 700 60 H I L CNN "Family"
+F8 "http://www.ti.com/general/docs/suppproductinfo.tsp?distId=10&gotoUrl=http%3A%2F%2Fwww.ti.com%2Flit%2Fgpn%2Fne555" 200 800 60 H I L CNN "DK_Datasheet_Link"
+F9 "/product-detail/en/texas-instruments/NE555P/296-1411-5-ND/277057" 200 900 60 H I L CNN "DK_Detail_Page"
+F10 "IC OSC SINGLE TIMER 100KHZ 8-DIP" 200 1000 60 H I L CNN "Description"
+F11 "Texas Instruments" 200 1100 60 H I L CNN "Manufacturer"
+F12 "Active" 200 1200 60 H I L CNN "Status"
+DRAW
+S -350 200 350 -300 0 1 0 f
+X GND 1 0 -400 100 U 50 50 1 1 W
+X TRIG 2 -500 -100 150 R 50 50 1 1 I
+X OUT 3 500 -100 150 L 50 50 1 1 O
+X RESET 4 -500 100 150 R 50 50 1 1 I
+X CONT 5 -500 -200 150 R 50 50 1 1 B
+X THRES 6 -500 0 150 R 50 50 1 1 I
+X DISCH 7 500 0 150 L 50 50 1 1 O
+X VCC 8 0 300 100 D 50 50 1 1 W
 ENDDRAW
 ENDDEF
 #

@@ -725,14 +725,6 @@ Wire Wire Line
 Wire Wire Line
 	8300 3000 8550 3000
 NoConn ~ 8550 3100
-Text GLabel 9150 3100 2    50   Input ~ 0
-GND
-Text GLabel 9150 3000 2    50   Input ~ 0
-GND
-Text GLabel 9150 1850 2    50   Input ~ 0
-GND
-Text GLabel 9150 1750 2    50   Input ~ 0
-GND
 $Comp
 L clock:74HC390 U5
 U 1 1 5D185C43
@@ -1087,10 +1079,6 @@ Wire Wire Line
 	8300 6450 8550 6450
 Wire Wire Line
 	8550 6550 8300 6550
-Text GLabel 9150 5500 2    50   Input ~ 0
-GND
-Text GLabel 9150 5400 2    50   Input ~ 0
-GND
 Wire Wire Line
 	5150 5200 5150 4300
 Wire Wire Line
@@ -1482,10 +1470,6 @@ Wire Wire Line
 	8300 9900 8550 9900
 Wire Wire Line
 	8550 10000 8300 10000
-Text GLabel 9150 8950 2    50   Input ~ 0
-GND
-Text GLabel 9150 8850 2    50   Input ~ 0
-GND
 $Comp
 L clock:74HC390 U7
 U 1 1 5D46CD47
@@ -1630,10 +1614,6 @@ Wire Wire Line
 Connection ~ 5250 8800
 Wire Wire Line
 	5250 8800 5250 8350
-Text GLabel 9150 10200 2    50   Input ~ 0
-GND
-Text GLabel 9150 10100 2    50   Input ~ 0
-GND
 Wire Wire Line
 	6500 8450 6500 6900
 Wire Wire Line
@@ -1663,10 +1643,6 @@ Wire Wire Line
 Connection ~ 6300 9250
 Wire Wire Line
 	6300 9250 6150 9250
-Text GLabel 9150 6750 2    50   Input ~ 0
-GND
-Text GLabel 9150 6650 2    50   Input ~ 0
-GND
 Text GLabel 2150 1800 3    50   Input ~ 0
 GND
 Text GLabel 5400 6950 1    50   Input ~ 0
@@ -2294,4 +2270,274 @@ F 11 "Active" H 1550 9400 60  0001 L CNN "Status"
 	1    1350 8200
 	1    0    0    -1  
 $EndComp
+$Comp
+L dk_Clock-Timing-Programmable-Timers-and-Oscillators:NE555P U22
+U 1 1 5D95E044
+P 5750 12350
+F 0 "U22" H 5550 12725 60  0000 C CNN
+F 1 "NE555P" H 5525 12625 60  0000 C CNN
+F 2 "digikey-footprints:DIP-8_W7.62mm" H 5950 12550 60  0001 L CNN
+F 3 "http://www.ti.com/general/docs/suppproductinfo.tsp?distId=10&gotoUrl=http%3A%2F%2Fwww.ti.com%2Flit%2Fgpn%2Fne555" H 5950 12650 60  0001 L CNN
+F 4 "296-1411-5-ND" H 5950 12750 60  0001 L CNN "Digi-Key_PN"
+F 5 "NE555P" H 5950 12850 60  0001 L CNN "MPN"
+F 6 "Integrated Circuits (ICs)" H 5950 12950 60  0001 L CNN "Category"
+F 7 "Clock/Timing - Programmable Timers and Oscillators" H 5950 13050 60  0001 L CNN "Family"
+F 8 "http://www.ti.com/general/docs/suppproductinfo.tsp?distId=10&gotoUrl=http%3A%2F%2Fwww.ti.com%2Flit%2Fgpn%2Fne555" H 5950 13150 60  0001 L CNN "DK_Datasheet_Link"
+F 9 "/product-detail/en/texas-instruments/NE555P/296-1411-5-ND/277057" H 5950 13250 60  0001 L CNN "DK_Detail_Page"
+F 10 "IC OSC SINGLE TIMER 100KHZ 8-DIP" H 5950 13350 60  0001 L CNN "Description"
+F 11 "Texas Instruments" H 5950 13450 60  0001 L CNN "Manufacturer"
+F 12 "Active" H 5950 13550 60  0001 L CNN "Status"
+	1    5750 12350
+	1    0    0    -1  
+$EndComp
+Text GLabel 5750 11750 1    50   Input ~ 0
+VCC
+Wire Wire Line
+	5200 12250 5250 12250
+$Comp
+L Device:C C20
+U 1 1 5D9BE9FA
+P 5150 12925
+F 0 "C20" H 5265 12971 50  0000 L CNN
+F 1 "10nF" H 5265 12880 50  0000 L CNN
+F 2 "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P2.50mm" H 5188 12775 50  0001 C CNN
+F 3 "~" H 5150 12925 50  0001 C CNN
+	1    5150 12925
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C7
+U 1 1 5D9C1C6A
+P 4875 12925
+F 0 "C7" H 4600 12950 50  0000 L CNN
+F 1 "100nF" H 4525 12850 50  0000 L CNN
+F 2 "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P2.50mm" H 4913 12775 50  0001 C CNN
+F 3 "~" H 4875 12925 50  0001 C CNN
+	1    4875 12925
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5750 12750 5750 13075
+Wire Wire Line
+	5750 13075 5150 13075
+Connection ~ 5150 13075
+Wire Wire Line
+	5150 13075 4875 13075
+Text GLabel 5750 13075 2    50   Input ~ 0
+GND
+Wire Wire Line
+	5150 12775 5150 12550
+Wire Wire Line
+	5150 12550 5250 12550
+$Comp
+L Device:C C21
+U 1 1 5DA21AE9
+P 5900 11975
+F 0 "C21" H 6015 12021 50  0000 L CNN
+F 1 "100nF" H 6015 11930 50  0000 L CNN
+F 2 "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P2.50mm" H 5938 11825 50  0001 C CNN
+F 3 "~" H 5900 11975 50  0001 C CNN
+	1    5900 11975
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	5750 11850 5750 11975
+Connection ~ 5750 11975
+Wire Wire Line
+	5750 11975 5750 12050
+Wire Wire Line
+	5200 11850 5750 11850
+Wire Wire Line
+	5200 11850 5200 12250
+Wire Wire Line
+	5750 11750 5750 11850
+Connection ~ 5750 11850
+Text GLabel 6050 11975 2    50   Input ~ 0
+GND
+Wire Wire Line
+	4875 12775 4875 12450
+Wire Wire Line
+	4875 12350 5250 12350
+Wire Wire Line
+	5250 12450 4875 12450
+Connection ~ 4875 12450
+Wire Wire Line
+	4875 12450 4875 12350
+$Comp
+L Device:D D3
+U 1 1 5DB771DB
+P 3975 12125
+F 0 "D3" V 4021 12046 50  0000 R CNN
+F 1 "D" V 3930 12046 50  0000 R CNN
+F 2 "digikey-footprints:Diode_DO-35_P10mm" H 3975 12125 50  0001 C CNN
+F 3 "~" H 3975 12125 50  0001 C CNN
+	1    3975 12125
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:D D4
+U 1 1 5DB77C92
+P 4475 12300
+F 0 "D4" V 4429 12379 50  0000 L CNN
+F 1 "D" V 4520 12379 50  0000 L CNN
+F 2 "digikey-footprints:Diode_DO-35_P10mm" H 4475 12300 50  0001 C CNN
+F 3 "~" H 4475 12300 50  0001 C CNN
+	1    4475 12300
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R50
+U 1 1 5DB7BBEA
+P 4675 11875
+F 0 "R50" H 4605 11829 50  0000 R CNN
+F 1 "100K" H 4605 11920 50  0000 R CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 4605 11875 50  0001 C CNN
+F 3 "~" H 4675 11875 50  0001 C CNN
+	1    4675 11875
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	3975 12450 4475 12450
+Wire Wire Line
+	4675 11625 4675 11725
+Wire Wire Line
+	6250 12350 6400 12350
+Wire Wire Line
+	6400 12350 6400 11450
+Wire Wire Line
+	6400 11450 4550 11450
+Connection ~ 4550 11625
+Wire Wire Line
+	4550 11625 4675 11625
+Wire Wire Line
+	3975 11625 4275 11625
+$Comp
+L Sensor_Optical:VT93xx R49
+U 1 1 5DC80BDF
+P 4275 11875
+F 0 "R49" H 4345 11921 50  0000 L CNN
+F 1 "VT93xx" H 4345 11830 50  0000 L CNN
+F 2 "OptoDevice:R_LDR_4.9x4.2mm_P2.54mm_Vertical" V 4450 11875 50  0001 C CNN
+F 3 "http://www.produktinfo.conrad.com/datenblaetter/125000-149999/140375-da-01-en-FOTOWIDERSTAND__VT_93_N2__THT_.pdf" H 4275 11825 50  0001 C CNN
+	1    4275 11875
+	1    0    0    -1  
+$EndComp
+Connection ~ 4475 12450
+Wire Wire Line
+	4475 12450 4875 12450
+Wire Wire Line
+	4550 11450 4550 11625
+Wire Wire Line
+	4275 12025 4275 12075
+Wire Wire Line
+	4275 12075 4475 12075
+Wire Wire Line
+	4675 12075 4675 12025
+Wire Wire Line
+	4475 12150 4475 12075
+Connection ~ 4475 12075
+Wire Wire Line
+	4475 12075 4675 12075
+Wire Wire Line
+	4275 11725 4275 11625
+Connection ~ 4275 11625
+Wire Wire Line
+	4275 11625 4550 11625
+Wire Wire Line
+	3975 12275 3975 12450
+Wire Wire Line
+	3975 11975 3975 11625
+$Comp
+L Transistor_BJT:PN2222A Q1
+U 1 1 5DE78783
+P 7350 12450
+F 0 "Q1" H 7540 12496 50  0000 L CNN
+F 1 "PN2222A" H 7540 12405 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-92_Inline" H 7550 12375 50  0001 L CIN
+F 3 "http://www.fairchildsemi.com/ds/PN/PN2222A.pdf" H 7350 12450 50  0001 L CNN
+	1    7350 12450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6250 12450 6550 12450
+$Comp
+L Device:R R51
+U 1 1 5DEB054B
+P 6700 12450
+F 0 "R51" H 6630 12404 50  0000 R CNN
+F 1 "100K" H 6630 12495 50  0000 R CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 6630 12450 50  0001 C CNN
+F 3 "~" H 6700 12450 50  0001 C CNN
+	1    6700 12450
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6850 12450 7150 12450
+Text GLabel 7450 12775 3    50   Input ~ 0
+GND
+Wire Wire Line
+	7450 12650 7450 12775
+Wire Wire Line
+	9150 1750 9375 1750
+Wire Wire Line
+	9375 1750 9375 1850
+Wire Wire Line
+	9375 12075 7450 12075
+Wire Wire Line
+	7450 12075 7450 12250
+Wire Wire Line
+	9150 1850 9375 1850
+Connection ~ 9375 1850
+Wire Wire Line
+	9375 1850 9375 3000
+Wire Wire Line
+	9150 3000 9375 3000
+Connection ~ 9375 3000
+Wire Wire Line
+	9150 3100 9375 3100
+Wire Wire Line
+	9375 3000 9375 3100
+Connection ~ 9375 3100
+Wire Wire Line
+	9375 3100 9375 5400
+Wire Wire Line
+	9150 5400 9375 5400
+Connection ~ 9375 5400
+Wire Wire Line
+	9375 5400 9375 5500
+Wire Wire Line
+	9150 5500 9375 5500
+Connection ~ 9375 5500
+Wire Wire Line
+	9375 5500 9375 6650
+Wire Wire Line
+	9150 6650 9375 6650
+Connection ~ 9375 6650
+Wire Wire Line
+	9375 6650 9375 6750
+Wire Wire Line
+	9150 6750 9375 6750
+Connection ~ 9375 6750
+Wire Wire Line
+	9375 6750 9375 8850
+Wire Wire Line
+	9150 8850 9375 8850
+Connection ~ 9375 8850
+Wire Wire Line
+	9375 8850 9375 8950
+Wire Wire Line
+	9150 8950 9375 8950
+Connection ~ 9375 8950
+Wire Wire Line
+	9375 8950 9375 10100
+Wire Wire Line
+	9150 10100 9375 10100
+Connection ~ 9375 10100
+Wire Wire Line
+	9375 10100 9375 10200
+Wire Wire Line
+	9150 10200 9375 10200
+Connection ~ 9375 10200
+Wire Wire Line
+	9375 10200 9375 12075
 $EndSCHEMATC
