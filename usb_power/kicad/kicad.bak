@@ -298,4 +298,8 @@ Wire Wire Line
 Wire Wire Line
 	7475 3625 7350 3625
 Connection ~ 7475 3300
+Text GLabel 5650 3375 1    50   Input ~ 0
+VCC
+Text GLabel 7475 3000 1    50   Input ~ 0
+VCC
 $EndSCHEMATC

@@ -1995,53 +1995,38 @@ Wire Wire Line
 	3700 5850 3600 5850
 Wire Wire Line
 	3600 5850 3600 5700
-$Comp
-L Connector:Jack-DC J1
-U 1 1 5D0C7F55
-P 1950 8150
-F 0 "J1" H 2007 8475 50  0000 C CNN
-F 1 "Jack-DC" H 2007 8384 50  0000 C CNN
-F 2 "KiCad:BarrelJack_CUI_PJ-063AH_Horizontal" H 2000 8110 50  0001 C CNN
-F 3 "~" H 2000 8110 50  0001 C CNN
-	1    1950 8150
-	1    0    0    -1  
-$EndComp
-Text GLabel 2500 8050 2    50   Input ~ 0
+Text GLabel 2150 8300 2    50   Input ~ 0
 VCC
-Text GLabel 2500 8250 2    50   Input ~ 0
+Text GLabel 2150 8000 2    50   Input ~ 0
 GND
 Wire Wire Line
-	2500 8050 2450 8050
-Wire Wire Line
-	2250 8250 2450 8250
+	2150 8300 2100 8300
 $Comp
 L power:PWR_FLAG #FLG0101
 U 1 1 5D14D41D
-P 2450 8050
-F 0 "#FLG0101" H 2450 8125 50  0001 C CNN
-F 1 "PWR_FLAG" H 2450 8223 50  0000 C CNN
-F 2 "" H 2450 8050 50  0001 C CNN
-F 3 "~" H 2450 8050 50  0001 C CNN
-	1    2450 8050
+P 2100 8300
+F 0 "#FLG0101" H 2100 8375 50  0001 C CNN
+F 1 "PWR_FLAG" H 2100 8473 50  0000 C CNN
+F 2 "" H 2100 8300 50  0001 C CNN
+F 3 "~" H 2100 8300 50  0001 C CNN
+	1    2100 8300
 	1    0    0    -1  
 $EndComp
-Connection ~ 2450 8050
-Wire Wire Line
-	2450 8050 2250 8050
+Connection ~ 2100 8300
 $Comp
 L power:PWR_FLAG #FLG0102
 U 1 1 5D2210FE
-P 2450 8250
-F 0 "#FLG0102" H 2450 8325 50  0001 C CNN
-F 1 "PWR_FLAG" H 2450 8423 50  0000 C CNN
-F 2 "" H 2450 8250 50  0001 C CNN
-F 3 "~" H 2450 8250 50  0001 C CNN
-	1    2450 8250
-	-1   0    0    1   
+P 2100 8000
+F 0 "#FLG0102" H 2100 8075 50  0001 C CNN
+F 1 "PWR_FLAG" H 2100 8173 50  0000 C CNN
+F 2 "" H 2100 8000 50  0001 C CNN
+F 3 "~" H 2100 8000 50  0001 C CNN
+	1    2100 8000
+	1    0    0    -1  
 $EndComp
-Connection ~ 2450 8250
+Connection ~ 2100 8000
 Wire Wire Line
-	2450 8250 2500 8250
+	2100 8000 2150 8000
 Wire Wire Line
 	3550 5750 3550 6700
 $Comp
@@ -2282,4 +2267,31 @@ Wire Wire Line
 Connection ~ 3200 1050
 Wire Wire Line
 	3200 1050 4100 1050
+Wire Wire Line
+	1650 8000 2100 8000
+Wire Wire Line
+	1650 8300 2100 8300
+NoConn ~ 1650 8100
+NoConn ~ 1650 8200
+Text GLabel 1450 8500 3    50   Input ~ 0
+GND
+$Comp
+L clock:USB-SS-52100-001 J1
+U 1 1 5D8F04E6
+P 1350 8200
+F 0 "J1" H 1470 8712 60  0000 C CNN
+F 1 "USB-SS-52100-001" H 1470 8606 60  0000 C CNN
+F 2 "KiCad:USB_A_Stewart_SS-52100-001_Horizontal" H 1550 8400 60  0001 L CNN
+F 3 "https://belfuse.com/resources/drawings/stewartconnector/dr-stw-ss-52100-001.pdf" H 1550 8500 60  0001 L CNN
+F 4 "380-1412-ND" H 1550 8600 60  0001 L CNN "Digi-Key_PN"
+F 5 "SS-52100-001" H 1550 8700 60  0001 L CNN "MPN"
+F 6 "Connectors, Interconnects" H 1550 8800 60  0001 L CNN "Category"
+F 7 "USB, DVI, HDMI Connectors" H 1550 8900 60  0001 L CNN "Family"
+F 8 "https://www.digikey.com/product-detail/en/stewart-connector/SS-52100-001/380-1412-ND/7902377" H 1550 9100 60  0001 L CNN "DK_Detail_Page"
+F 9 "CONN RCPT USB2.0 TYPEA 4POS R/A" H 1550 9200 60  0001 L CNN "Description"
+F 10 "Stewart Connector" H 1550 9300 60  0001 L CNN "Manufacturer"
+F 11 "Active" H 1550 9400 60  0001 L CNN "Status"
+	1    1350 8200
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
