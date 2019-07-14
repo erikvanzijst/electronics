@@ -1,4 +1,4 @@
-update=Monday, June 17, 2019 at 09:08:21 PM
+update=Thursday, July 11, 2019 at 10:58:22 PM
 version=1
 last_client=kicad
 [general]
@@ -25,8 +25,8 @@ ProhibitOverlappingCourtyards=1
 MinTrackWidth=0.1524
 MinViaDiameter=0.6858
 MinViaDrill=0.3302
-MinMicroViaDiameter=0.2
-MinMicroViaDrill=0.09999999999999999
+MinMicroViaDiameter=0.6858
+MinMicroViaDrill=0.3302
 MinHoleToHole=0.25
 TrackWidth1=0.254
 TrackWidth2=0.1778
@@ -56,7 +56,7 @@ OthersTextSizeThickness=0.15
 OthersTextItalic=0
 OthersTextUpright=1
 SolderMaskClearance=0.0508
-SolderMaskMinWidth=0.25
+SolderMaskMinWidth=0.1778
 SolderPasteClearance=0
 SolderPasteRatio=-0
 [pcbnew/Layer.F.Cu]
