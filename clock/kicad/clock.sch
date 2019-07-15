@@ -41,7 +41,7 @@ L Device:C C2
 U 1 1 5D0341EF
 P 900 1800
 F 0 "C2" H 1015 1846 50  0000 L CNN
-F 1 "22pF" H 1015 1755 50  0000 L CNN
+F 1 "20pF" H 1015 1755 50  0000 L CNN
 F 2 "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P2.50mm" H 938 1650 50  0001 C CNN
 F 3 "~" H 900 1800 50  0001 C CNN
 	1    900  1800
@@ -52,7 +52,7 @@ L Device:C C1
 U 1 1 5D0345DF
 P 900 1500
 F 0 "C1" H 1015 1546 50  0000 L CNN
-F 1 "10pF" H 1015 1455 50  0000 L CNN
+F 1 "20pF" H 1015 1455 50  0000 L CNN
 F 2 "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P2.50mm" H 938 1350 50  0001 C CNN
 F 3 "~" H 900 1500 50  0001 C CNN
 	1    900  1500
@@ -2265,41 +2265,10 @@ F 11 "Active" H 1550 9400 60  0001 L CNN "Status"
 	1    1350 8200
 	1    0    0    -1  
 $EndComp
-$Comp
-L dk_Clock-Timing-Programmable-Timers-and-Oscillators:NE555P U22
-U 1 1 5D95E044
-P 5750 11250
-F 0 "U22" H 5550 11625 60  0000 C CNN
-F 1 "NE555P" H 5525 11525 60  0000 C CNN
-F 2 "Package_DIP:DIP-8_W7.62mm_Socket" H 5950 11450 60  0001 L CNN
-F 3 "http://www.ti.com/general/docs/suppproductinfo.tsp?distId=10&gotoUrl=http%3A%2F%2Fwww.ti.com%2Flit%2Fgpn%2Fne555" H 5950 11550 60  0001 L CNN
-F 4 "296-1411-5-ND" H 5950 11650 60  0001 L CNN "Digi-Key_PN"
-F 5 "NE555P" H 5950 11750 60  0001 L CNN "MPN"
-F 6 "Integrated Circuits (ICs)" H 5950 11850 60  0001 L CNN "Category"
-F 7 "Clock/Timing - Programmable Timers and Oscillators" H 5950 11950 60  0001 L CNN "Family"
-F 8 "http://www.ti.com/general/docs/suppproductinfo.tsp?distId=10&gotoUrl=http%3A%2F%2Fwww.ti.com%2Flit%2Fgpn%2Fne555" H 5950 12050 60  0001 L CNN "DK_Datasheet_Link"
-F 9 "/product-detail/en/texas-instruments/NE555P/296-1411-5-ND/277057" H 5950 12150 60  0001 L CNN "DK_Detail_Page"
-F 10 "IC OSC SINGLE TIMER 100KHZ 8-DIP" H 5950 12250 60  0001 L CNN "Description"
-F 11 "Texas Instruments" H 5950 12350 60  0001 L CNN "Manufacturer"
-F 12 "Active" H 5950 12450 60  0001 L CNN "Status"
-	1    5750 11250
-	1    0    0    -1  
-$EndComp
 Text GLabel 5750 10650 1    50   Input ~ 0
 VCC
 Wire Wire Line
 	5200 11150 5250 11150
-$Comp
-L Device:C C20
-U 1 1 5D9BE9FA
-P 5150 11825
-F 0 "C20" H 5265 11871 50  0000 L CNN
-F 1 "10nF" H 5265 11780 50  0000 L CNN
-F 2 "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P2.50mm" H 5188 11675 50  0001 C CNN
-F 3 "~" H 5150 11825 50  0001 C CNN
-	1    5150 11825
-	1    0    0    -1  
-$EndComp
 $Comp
 L Device:C C7
 U 1 1 5D9C1C6A
@@ -2311,17 +2280,8 @@ F 3 "~" H 4875 11825 50  0001 C CNN
 	1    4875 11825
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	5750 11650 5750 11975
-Wire Wire Line
-	5750 11975 5150 11975
-Connection ~ 5150 11975
-Wire Wire Line
-	5150 11975 4875 11975
 Text GLabel 5750 11975 2    50   Input ~ 0
 GND
-Wire Wire Line
-	5150 11675 5150 11450
 Wire Wire Line
 	5150 11450 5250 11450
 $Comp
@@ -2572,4 +2532,44 @@ F 3 "~" H 4100 900 50  0001 C CNN
 $EndComp
 Text GLabel 4100 750  1    50   Input ~ 0
 GND
+Connection ~ 5150 11975
+Wire Wire Line
+	5150 11975 4875 11975
+Wire Wire Line
+	5750 11975 5150 11975
+Wire Wire Line
+	5750 11650 5750 11975
+Wire Wire Line
+	5150 11675 5150 11450
+$Comp
+L Device:C C20
+U 1 1 5D9BE9FA
+P 5150 11825
+F 0 "C20" H 5265 11871 50  0000 L CNN
+F 1 "10nF" H 5265 11780 50  0000 L CNN
+F 2 "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P2.50mm" H 5188 11675 50  0001 C CNN
+F 3 "~" H 5150 11825 50  0001 C CNN
+	1    5150 11825
+	1    0    0    -1  
+$EndComp
+$Comp
+L dk_Clock-Timing-Programmable-Timers-and-Oscillators:NE555P U22
+U 1 1 5D95E044
+P 5750 11250
+F 0 "U22" H 5550 11625 60  0000 C CNN
+F 1 "NE555P" H 5525 11525 60  0000 C CNN
+F 2 "Package_DIP:DIP-8_W7.62mm_Socket" H 5950 11450 60  0001 L CNN
+F 3 "http://www.ti.com/general/docs/suppproductinfo.tsp?distId=10&gotoUrl=http%3A%2F%2Fwww.ti.com%2Flit%2Fgpn%2Fne555" H 5950 11550 60  0001 L CNN
+F 4 "296-1411-5-ND" H 5950 11650 60  0001 L CNN "Digi-Key_PN"
+F 5 "NE555P" H 5950 11750 60  0001 L CNN "MPN"
+F 6 "Integrated Circuits (ICs)" H 5950 11850 60  0001 L CNN "Category"
+F 7 "Clock/Timing - Programmable Timers and Oscillators" H 5950 11950 60  0001 L CNN "Family"
+F 8 "http://www.ti.com/general/docs/suppproductinfo.tsp?distId=10&gotoUrl=http%3A%2F%2Fwww.ti.com%2Flit%2Fgpn%2Fne555" H 5950 12050 60  0001 L CNN "DK_Datasheet_Link"
+F 9 "/product-detail/en/texas-instruments/NE555P/296-1411-5-ND/277057" H 5950 12150 60  0001 L CNN "DK_Detail_Page"
+F 10 "IC OSC SINGLE TIMER 100KHZ 8-DIP" H 5950 12250 60  0001 L CNN "Description"
+F 11 "Texas Instruments" H 5950 12350 60  0001 L CNN "Manufacturer"
+F 12 "Active" H 5950 12450 60  0001 L CNN "Status"
+	1    5750 11250
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
