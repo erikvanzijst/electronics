@@ -1,3 +1,9 @@
 EESchema-DOCLIB  Version 2.0
 #
+$CMP USB-SS-52100-001
+D CONN RCPT USB2.0 TYPEA 4POS R/A
+K 609-1041-ND 73725
+F https://belfuse.com/resources/drawings/stewartconnector/dr-stw-ss-52100-001.pdf
+$ENDCMP
+#
 #End Doc Library

@@ -1940,38 +1940,24 @@ Wire Wire Line
 	3700 5850 3600 5850
 Wire Wire Line
 	3600 5850 3600 5700
-Text GLabel 2150 8300 2    50   Input ~ 0
+Text GLabel 4100 9450 3    50   Input ~ 0
 VCC
-Text GLabel 2150 8000 2    50   Input ~ 0
+Text GLabel 2050 9150 2    50   Input ~ 0
 GND
-Wire Wire Line
-	2150 8300 2100 8300
-$Comp
-L power:PWR_FLAG #FLG0101
-U 1 1 5D14D41D
-P 2100 8300
-F 0 "#FLG0101" H 2100 8375 50  0001 C CNN
-F 1 "PWR_FLAG" H 2100 8473 50  0000 C CNN
-F 2 "" H 2100 8300 50  0001 C CNN
-F 3 "~" H 2100 8300 50  0001 C CNN
-	1    2100 8300
-	1    0    0    -1  
-$EndComp
-Connection ~ 2100 8300
 $Comp
 L power:PWR_FLAG #FLG0102
 U 1 1 5D2210FE
-P 2100 8000
-F 0 "#FLG0102" H 2100 8075 50  0001 C CNN
-F 1 "PWR_FLAG" H 2100 8173 50  0000 C CNN
-F 2 "" H 2100 8000 50  0001 C CNN
-F 3 "~" H 2100 8000 50  0001 C CNN
-	1    2100 8000
+P 2000 9150
+F 0 "#FLG0102" H 2000 9225 50  0001 C CNN
+F 1 "PWR_FLAG" H 2000 9323 50  0000 C CNN
+F 2 "" H 2000 9150 50  0001 C CNN
+F 3 "~" H 2000 9150 50  0001 C CNN
+	1    2000 9150
 	1    0    0    -1  
 $EndComp
-Connection ~ 2100 8000
+Connection ~ 2000 9150
 Wire Wire Line
-	2100 8000 2150 8000
+	2000 9150 2050 9150
 Wire Wire Line
 	3550 5750 3550 6700
 $Comp
@@ -2207,31 +2193,27 @@ Wire Wire Line
 Connection ~ 3200 1050
 Wire Wire Line
 	3200 1050 4100 1050
-Wire Wire Line
-	1650 8000 2100 8000
-Wire Wire Line
-	1650 8300 2100 8300
-NoConn ~ 1650 8100
-NoConn ~ 1650 8200
-Text GLabel 1450 8500 3    50   Input ~ 0
+NoConn ~ 1550 9250
+NoConn ~ 1550 9350
+Text GLabel 1350 9650 3    50   Input ~ 0
 GND
 $Comp
 L clock:USB-SS-52100-001 J1
 U 1 1 5D8F04E6
-P 1350 8200
-F 0 "J1" H 1470 8712 60  0000 C CNN
-F 1 "USB-SS-52100-001" H 1470 8606 60  0000 C CNN
-F 2 "KiCad:USB_A_Stewart_SS-52100-001_Horizontal" H 1550 8400 60  0001 L CNN
-F 3 "https://belfuse.com/resources/drawings/stewartconnector/dr-stw-ss-52100-001.pdf" H 1550 8500 60  0001 L CNN
-F 4 "380-1412-ND" H 1550 8600 60  0001 L CNN "Digi-Key_PN"
-F 5 "SS-52100-001" H 1550 8700 60  0001 L CNN "MPN"
-F 6 "Connectors, Interconnects" H 1550 8800 60  0001 L CNN "Category"
-F 7 "USB, DVI, HDMI Connectors" H 1550 8900 60  0001 L CNN "Family"
-F 8 "https://www.digikey.com/product-detail/en/stewart-connector/SS-52100-001/380-1412-ND/7902377" H 1550 9100 60  0001 L CNN "DK_Detail_Page"
-F 9 "CONN RCPT USB2.0 TYPEA 4POS R/A" H 1550 9200 60  0001 L CNN "Description"
-F 10 "Stewart Connector" H 1550 9300 60  0001 L CNN "Manufacturer"
-F 11 "Active" H 1550 9400 60  0001 L CNN "Status"
-	1    1350 8200
+P 1250 9350
+F 0 "J1" H 1370 9862 60  0000 C CNN
+F 1 "USB-SS-52100-001" H 1370 9756 60  0000 C CNN
+F 2 "KiCad:USB_A_Stewart_SS-52100-001_Horizontal" H 1450 9550 60  0001 L CNN
+F 3 "https://belfuse.com/resources/drawings/stewartconnector/dr-stw-ss-52100-001.pdf" H 1450 9650 60  0001 L CNN
+F 4 "380-1412-ND" H 1450 9750 60  0001 L CNN "Digi-Key_PN"
+F 5 "SS-52100-001" H 1450 9850 60  0001 L CNN "MPN"
+F 6 "Connectors, Interconnects" H 1450 9950 60  0001 L CNN "Category"
+F 7 "USB, DVI, HDMI Connectors" H 1450 10050 60  0001 L CNN "Family"
+F 8 "https://www.digikey.com/product-detail/en/stewart-connector/SS-52100-001/380-1412-ND/7902377" H 1450 10250 60  0001 L CNN "DK_Detail_Page"
+F 9 "CONN RCPT USB2.0 TYPEA 4POS R/A" H 1450 10350 60  0001 L CNN "Description"
+F 10 "Stewart Connector" H 1450 10450 60  0001 L CNN "Manufacturer"
+F 11 "Active" H 1450 10550 60  0001 L CNN "Status"
+	1    1250 9350
 	1    0    0    -1  
 $EndComp
 Text GLabel 5750 10650 1    50   Input ~ 0
@@ -2572,4 +2554,146 @@ F 3 "" H 5750 4250 50  0001 C CNN
 	1    5750 4150
 	1    0    0    -1  
 $EndComp
+$Comp
+L clock:LD1117V U23
+U 1 1 5D8CEEE4
+P 3000 9450
+F 0 "U23" H 3000 9737 60  0000 C CNN
+F 1 "LD1117V" H 3000 9631 60  0000 C CNN
+F 2 "digikey-footprints:TO-220-3" H 3200 9650 60  0001 L CNN
+F 3 "http://www.st.com/content/ccc/resource/technical/document/datasheet/99/3b/7d/91/91/51/4b/be/CD00000544.pdf/files/CD00000544.pdf/jcr:content/translations/en.CD00000544.pdf" H 3200 9750 60  0001 L CNN
+F 4 "497-7310-5-ND" H 3200 9850 60  0001 L CNN "Digi-Key_PN"
+F 5 "LD1117V" H 3200 9950 60  0001 L CNN "MPN"
+F 6 "Integrated Circuits (ICs)" H 3200 10050 60  0001 L CNN "Category"
+F 7 "PMIC - Voltage Regulators - Linear" H 3200 10150 60  0001 L CNN "Family"
+F 8 "http://www.st.com/content/ccc/resource/technical/document/datasheet/99/3b/7d/91/91/51/4b/be/CD00000544.pdf/files/CD00000544.pdf/jcr:content/translations/en.CD00000544.pdf" H 3200 10250 60  0001 L CNN "DK_Datasheet_Link"
+F 9 "/product-detail/en/stmicroelectronics/LD1117V33/497-1491-5-ND/586012" H 3200 10350 60  0001 L CNN "DK_Detail_Page"
+F 10 "IC REG LINEAR 1.8V-5V 800MA TO220AB" H 3200 10450 60  0001 L CNN "Description"
+F 11 "STMicroelectronics" H 3200 10550 60  0001 L CNN "Manufacturer"
+F 12 "Active" H 3200 10650 60  0001 L CNN "Status"
+	1    3000 9450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C23
+U 1 1 5D98A569
+P 2600 9900
+F 0 "C23" H 2715 9946 50  0000 L CNN
+F 1 "10uF" H 2715 9855 50  0000 L CNN
+F 2 "" H 2638 9750 50  0001 C CNN
+F 3 "~" H 2600 9900 50  0001 C CNN
+	1    2600 9900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1550 9150 1650 9150
+$Comp
+L Device:R R54
+U 1 1 5DA44C3B
+P 3450 9700
+F 0 "R54" H 3520 9746 50  0000 L CNN
+F 1 "120" H 3520 9655 50  0000 L CNN
+F 2 "" V 3380 9700 50  0001 C CNN
+F 3 "~" H 3450 9700 50  0001 C CNN
+	1    3450 9700
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R53
+U 1 1 5DA450EA
+P 3000 10150
+F 0 "R53" H 3070 10196 50  0000 L CNN
+F 1 "R" H 3070 10105 50  0000 L CNN
+F 2 "" V 2930 10150 50  0001 C CNN
+F 3 "~" H 3000 10150 50  0001 C CNN
+	1    3000 10150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3450 9850 3450 9900
+Wire Wire Line
+	3450 9900 3000 9900
+Connection ~ 3000 9900
+Wire Wire Line
+	3000 9900 3000 10000
+Wire Wire Line
+	3300 9450 3450 9450
+Wire Wire Line
+	3450 9450 3450 9550
+Connection ~ 3450 9450
+$Comp
+L Device:C C24
+U 1 1 5DB38DC1
+P 3800 9900
+F 0 "C24" H 3915 9946 50  0000 L CNN
+F 1 "10uF" H 3915 9855 50  0000 L CNN
+F 2 "" H 3838 9750 50  0001 C CNN
+F 3 "~" H 3800 9900 50  0001 C CNN
+	1    3800 9900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2600 9750 2600 9450
+Connection ~ 2600 9450
+Wire Wire Line
+	2600 9450 2700 9450
+Wire Wire Line
+	3800 9750 3800 9450
+Wire Wire Line
+	3450 9450 3800 9450
+Wire Wire Line
+	3800 9450 4100 9450
+Connection ~ 3800 9450
+Wire Wire Line
+	3800 10050 3800 10350
+Wire Wire Line
+	3800 10350 3000 10350
+Wire Wire Line
+	1650 10350 1650 9150
+Connection ~ 1650 9150
+Wire Wire Line
+	1650 9150 2000 9150
+Wire Wire Line
+	2600 10050 2600 10350
+Connection ~ 2600 10350
+Wire Wire Line
+	2600 10350 1650 10350
+Wire Wire Line
+	3000 10300 3000 10350
+Connection ~ 3000 10350
+Wire Wire Line
+	3000 10350 2600 10350
+Wire Wire Line
+	1550 9450 2600 9450
+Text Label 3900 9450 0    50   ~ 0
+3V
+Text Label 1750 9450 0    50   ~ 0
+5V
+$Comp
+L power:PWR_FLAG #FLG0104
+U 1 1 5DD3A742
+P 2600 9450
+F 0 "#FLG0104" H 2600 9525 50  0001 C CNN
+F 1 "PWR_FLAG" H 2600 9623 50  0000 C CNN
+F 2 "" H 2600 9450 50  0001 C CNN
+F 3 "~" H 2600 9450 50  0001 C CNN
+	1    2600 9450
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:PWR_FLAG #FLG0101
+U 1 1 5D14D41D
+P 3000 9800
+F 0 "#FLG0101" H 3000 9875 50  0001 C CNN
+F 1 "PWR_FLAG" H 3000 9973 50  0000 C CNN
+F 2 "" H 3000 9800 50  0001 C CNN
+F 3 "~" H 3000 9800 50  0001 C CNN
+	1    3000 9800
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3000 9750 3000 9800
+Connection ~ 3000 9800
+Wire Wire Line
+	3000 9800 3000 9900
 $EndSCHEMATC
