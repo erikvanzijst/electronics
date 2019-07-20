@@ -387,17 +387,6 @@ $EndComp
 Wire Wire Line
 	7500 3250 7500 3350
 $Comp
-L clock:74HC08 U4
-U 1 1 5D07855E
-P 5750 4150
-F 0 "U4" H 5550 4650 50  0000 C CNN
-F 1 "74HC08" H 5900 4650 50  0000 C CNN
-F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 5750 4250 50  0001 C CNN
-F 3 "" H 5750 4250 50  0001 C CNN
-	1    5750 4150
-	1    0    0    -1  
-$EndComp
-$Comp
 L power:VCC #PWR08
 U 1 1 5D079C76
 P 5750 3500
@@ -431,8 +420,6 @@ Wire Wire Line
 Wire Wire Line
 	6200 3000 5350 3000
 Wire Wire Line
-	5350 3000 5350 3800
-Wire Wire Line
 	5350 3800 5400 3800
 Wire Wire Line
 	5250 3050 6150 3050
@@ -449,21 +436,9 @@ Wire Wire Line
 Connection ~ 5200 2050
 Wire Wire Line
 	6450 2600 6450 3150
-Wire Wire Line
-	6450 3150 5250 3150
-Wire Wire Line
-	5250 3150 5250 4100
-Wire Wire Line
-	5250 4100 5400 4100
 Connection ~ 6450 2600
 Wire Wire Line
 	6450 2600 7200 2600
-Wire Wire Line
-	6500 3200 5300 3200
-Wire Wire Line
-	5300 3200 5300 4000
-Wire Wire Line
-	5300 4000 5400 4000
 Wire Wire Line
 	6300 2700 7200 2700
 Wire Wire Line
@@ -475,10 +450,6 @@ Wire Wire Line
 	5100 2400 5100 3300
 Wire Wire Line
 	5100 3300 6250 3300
-Wire Wire Line
-	6250 3300 6250 4050
-Wire Wire Line
-	6250 4050 6100 4050
 Text GLabel 6800 1700 0    50   Input ~ 0
 VCC
 Text GLabel 6800 1800 0    50   Input ~ 0
@@ -1106,8 +1077,6 @@ Wire Wire Line
 Wire Wire Line
 	6100 4250 6150 4250
 Wire Wire Line
-	6150 4250 6150 4850
-Wire Wire Line
 	6150 4850 5250 4850
 Wire Wire Line
 	5250 4850 5250 5950
@@ -1174,7 +1143,7 @@ U 1 1 5D3FB4BE
 P 5750 7400
 F 0 "U6" H 5550 7900 50  0000 C CNN
 F 1 "74HC08" H 5900 7900 50  0000 C CNN
-F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 5750 7500 50  0001 C CNN
+F 2 "clock:Socket_DIP-14_0.775in_Conn" H 5750 7500 50  0001 C CNN
 F 3 "" H 5750 7500 50  0001 C CNN
 	1    5750 7400
 	0    1    1    0   
@@ -2011,7 +1980,7 @@ U 1 1 5DD6A2C2
 P 3550 5400
 F 0 "U20" H 3400 5750 50  0000 C CNN
 F 1 "74HC14" H 3750 5750 50  0000 C CNN
-F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 3550 5400 50  0001 C CNN
+F 2 "clock:Socket_DIP-14_0.775in_Conn" H 3550 5400 50  0001 C CNN
 F 3 "" H 3550 5400 50  0001 C CNN
 	1    3550 5400
 	0    1    1    0   
@@ -2570,6 +2539,37 @@ F 10 "IC OSC SINGLE TIMER 100KHZ 8-DIP" H 5950 12250 60  0001 L CNN "Description
 F 11 "Texas Instruments" H 5950 12350 60  0001 L CNN "Manufacturer"
 F 12 "Active" H 5950 12450 60  0001 L CNN "Status"
 	1    5750 11250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6500 3200 5300 3200
+Wire Wire Line
+	5350 3000 5350 3800
+Wire Wire Line
+	6450 3150 5250 3150
+Wire Wire Line
+	6150 4250 6150 4850
+Wire Wire Line
+	6250 4050 6100 4050
+Wire Wire Line
+	6250 3300 6250 4050
+Wire Wire Line
+	5300 4000 5400 4000
+Wire Wire Line
+	5300 3200 5300 4000
+Wire Wire Line
+	5250 4100 5400 4100
+Wire Wire Line
+	5250 3150 5250 4100
+$Comp
+L clock:74HC08 U4
+U 1 1 5D07855E
+P 5750 4150
+F 0 "U4" H 5550 4650 50  0000 C CNN
+F 1 "74HC08" H 5900 4650 50  0000 C CNN
+F 2 "clock:Socket_DIP-14_0.775in_Conn" H 5750 4250 50  0001 C CNN
+F 3 "" H 5750 4250 50  0001 C CNN
+	1    5750 4150
 	1    0    0    -1  
 $EndComp
 $EndSCHEMATC
