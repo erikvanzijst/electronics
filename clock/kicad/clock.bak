@@ -84,7 +84,7 @@ U 1 1 5D03F41F
 P 4000 1750
 F 0 "U5" H 3750 2200 60  0000 C CNN
 F 1 "SN74HC74N" H 3800 2350 60  0000 C CNN
-F 2 "Package_DIP:DIP-14_W7.62mm_Socket" H 4200 1950 60  0001 L CNN
+F 2 "clock:Socket_DIP-14_0.775in_Conn" H 4200 1950 60  0001 L CNN
 F 3 "http://www.ti.com/general/docs/suppproductinfo.tsp?distId=10&gotoUrl=http%3A%2F%2Fwww.ti.com%2Flit%2Fgpn%2Fsn74hc74" H 4200 2050 60  0001 L CNN
 F 4 "296-1602-5-ND" H 4200 2150 60  0001 L CNN "Digi-Key_PN"
 F 5 "SN74HC74N" H 4200 2250 60  0001 L CNN "MPN"
@@ -1371,12 +1371,12 @@ Wire Wire Line
 $Comp
 L Device:D D3
 U 1 1 5DB771DB
-P 3975 11025
-F 0 "D3" V 4021 10946 50  0000 R CNN
-F 1 "D" V 3930 10946 50  0000 R CNN
-F 2 "digikey-footprints:Diode_DO-35_P10mm" H 3975 11025 50  0001 C CNN
-F 3 "~" H 3975 11025 50  0001 C CNN
-	1    3975 11025
+P 3975 10775
+F 0 "D3" V 4021 10696 50  0000 R CNN
+F 1 "D" V 3930 10696 50  0000 R CNN
+F 2 "digikey-footprints:Diode_DO-35_P10mm" H 3975 10775 50  0001 C CNN
+F 3 "~" H 3975 10775 50  0001 C CNN
+	1    3975 10775
 	0    -1   -1   0   
 $EndComp
 $Comp
@@ -1391,67 +1391,51 @@ F 3 "~" H 4475 11200 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L Device:R R10
+L Device:R R9
 U 1 1 5DB7BBEA
-P 4675 10775
-F 0 "R10" H 4605 10729 50  0000 R CNN
-F 1 "100K" H 4605 10820 50  0000 R CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 4605 10775 50  0001 C CNN
-F 3 "~" H 4675 10775 50  0001 C CNN
-	1    4675 10775
+P 4675 10725
+F 0 "R9" H 4605 10679 50  0000 R CNN
+F 1 "100K" H 4605 10770 50  0000 R CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 4605 10725 50  0001 C CNN
+F 3 "~" H 4675 10725 50  0001 C CNN
+	1    4675 10725
 	-1   0    0    1   
 $EndComp
 Wire Wire Line
 	3975 11350 4475 11350
 Wire Wire Line
-	4675 10525 4675 10625
-Wire Wire Line
 	6250 11250 6400 11250
 Wire Wire Line
-	6400 11250 6400 10350
+	6400 11250 6400 10150
 Wire Wire Line
-	6400 10350 5350 10350
-Connection ~ 4550 10525
-Wire Wire Line
-	4550 10525 4675 10525
-Wire Wire Line
-	3975 10525 4275 10525
+	6400 10150 5350 10150
 $Comp
-L Sensor_Optical:VT93xx R9
+L Sensor_Optical:VT93xx R8
 U 1 1 5DC80BDF
-P 4275 10775
-F 0 "R9" H 4345 10821 50  0000 L CNN
-F 1 "VT93xx" H 4345 10730 50  0000 L CNN
-F 2 "OptoDevice:R_LDR_4.9x4.2mm_P2.54mm_Vertical" V 4450 10775 50  0001 C CNN
-F 3 "http://www.produktinfo.conrad.com/datenblaetter/125000-149999/140375-da-01-en-FOTOWIDERSTAND__VT_93_N2__THT_.pdf" H 4275 10725 50  0001 C CNN
-	1    4275 10775
+P 4275 10725
+F 0 "R8" H 4345 10771 50  0000 L CNN
+F 1 "VT93xx" H 4345 10680 50  0000 L CNN
+F 2 "OptoDevice:R_LDR_4.9x4.2mm_P2.54mm_Vertical" V 4450 10725 50  0001 C CNN
+F 3 "http://www.produktinfo.conrad.com/datenblaetter/125000-149999/140375-da-01-en-FOTOWIDERSTAND__VT_93_N2__THT_.pdf" H 4275 10675 50  0001 C CNN
+	1    4275 10725
 	1    0    0    -1  
 $EndComp
 Connection ~ 4475 11350
 Wire Wire Line
 	4475 11350 4875 11350
 Wire Wire Line
-	4550 10350 4550 10525
-Wire Wire Line
-	4275 10925 4275 10975
-Wire Wire Line
 	4275 10975 4475 10975
 Wire Wire Line
-	4675 10975 4675 10925
+	4675 10975 4675 10875
 Wire Wire Line
 	4475 11050 4475 10975
 Connection ~ 4475 10975
 Wire Wire Line
 	4475 10975 4675 10975
 Wire Wire Line
-	4275 10625 4275 10525
-Connection ~ 4275 10525
+	3975 10925 3975 11350
 Wire Wire Line
-	4275 10525 4550 10525
-Wire Wire Line
-	3975 11175 3975 11350
-Wire Wire Line
-	3975 10875 3975 10525
+	3975 10625 3975 10150
 $Comp
 L Transistor_BJT:PN2222A Q1
 U 1 1 5DE78783
@@ -1466,10 +1450,10 @@ $EndComp
 Wire Wire Line
 	6250 11350 6550 11350
 $Comp
-L Device:R R12
+L Device:R R11
 U 1 1 5DEB054B
 P 6700 11350
-F 0 "R12" H 6630 11304 50  0000 R CNN
+F 0 "R11" H 6630 11304 50  0000 R CNN
 F 1 "100K" H 6630 11395 50  0000 R CNN
 F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 6630 11350 50  0001 C CNN
 F 3 "~" H 6700 11350 50  0001 C CNN
@@ -1483,10 +1467,10 @@ GND
 Wire Wire Line
 	7450 11550 7450 11675
 $Comp
-L Device:R R11
+L Device:R R10
 U 1 1 5E34B6A6
 P 5350 10550
-F 0 "R11" H 5280 10504 50  0000 R CNN
+F 0 "R10" H 5280 10504 50  0000 R CNN
 F 1 "1K" H 5280 10595 50  0000 R CNN
 F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 5280 10550 50  0001 C CNN
 F 3 "~" H 5350 10550 50  0001 C CNN
@@ -1499,10 +1483,7 @@ Connection ~ 5350 10750
 Wire Wire Line
 	5350 10750 5750 10750
 Wire Wire Line
-	5350 10400 5350 10350
-Connection ~ 5350 10350
-Wire Wire Line
-	5350 10350 4550 10350
+	5350 10400 5350 10150
 Connection ~ 2550 1050
 Wire Wire Line
 	2550 1050 3200 1050
@@ -1604,25 +1585,14 @@ $EndComp
 Wire Wire Line
 	1550 9150 1650 9150
 $Comp
-L Device:R R8
+L Device:R R7
 U 1 1 5DA44C3B
 P 3450 9700
-F 0 "R8" H 3520 9746 50  0000 L CNN
-F 1 "120" H 3520 9655 50  0000 L CNN
+F 0 "R7" H 3520 9746 50  0000 L CNN
+F 1 "220" H 3520 9655 50  0000 L CNN
 F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 3380 9700 50  0001 C CNN
 F 3 "~" H 3450 9700 50  0001 C CNN
 	1    3450 9700
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R R7
-U 1 1 5DA450EA
-P 3000 10150
-F 0 "R7" H 3070 10196 50  0000 L CNN
-F 1 "R" H 3070 10105 50  0000 L CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 2930 10150 50  0001 C CNN
-F 3 "~" H 3000 10150 50  0001 C CNN
-	1    3000 10150
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
@@ -1643,7 +1613,7 @@ U 1 1 5DB38DC1
 P 3800 9900
 F 0 "C7" H 3915 9946 50  0000 L CNN
 F 1 "10uF" H 3915 9855 50  0000 L CNN
-F 2 "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P2.50mm" H 3838 9750 50  0001 C CNN
+F 2 "Capacitor_THT:C_Radial_D5.0mm_H11.0mm_P2.00mm" H 3838 9750 50  0001 C CNN
 F 3 "~" H 3800 9900 50  0001 C CNN
 	1    3800 9900
 	1    0    0    -1  
@@ -1663,7 +1633,7 @@ Connection ~ 3800 9450
 Wire Wire Line
 	3800 10050 3800 10350
 Wire Wire Line
-	3800 10350 3000 10350
+	3800 10350 3250 10350
 Wire Wire Line
 	1650 10350 1650 9150
 Connection ~ 1650 9150
@@ -2304,17 +2274,6 @@ Wire Wire Line
 	9700 8200 9700 8750
 Wire Wire Line
 	9700 8750 9900 8750
-$Comp
-L Regulator_Linear:LM317L_TO92 U2
-U 1 1 60F323F5
-P 3000 9450
-F 0 "U2" H 3000 9692 50  0000 C CNN
-F 1 "LM317L_TO92" H 3000 9601 50  0000 C CNN
-F 2 "Package_TO_SOT_THT:TO-92_Inline_Wide" H 3000 9675 50  0001 C CIN
-F 3 "http://www.ti.com/lit/ds/snvs775k/snvs775k.pdf" H 3000 9450 50  0001 C CNN
-	1    3000 9450
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	7400 9900 9600 9900
 Wire Wire Line
@@ -2371,4 +2330,61 @@ Wire Wire Line
 	7900 9450 7900 10000
 Wire Wire Line
 	7900 10000 9900 10000
+$Comp
+L Device:R_POT_TRIM RV1
+U 1 1 610D8243
+P 3000 10150
+F 0 "RV1" H 2930 10196 50  0000 R CNN
+F 1 "0-500" H 2930 10105 50  0000 R CNN
+F 2 "Potentiometer_THT:Potentiometer_Bourns_3339P_Vertical_HandSoldering" H 3000 10150 50  0001 C CNN
+F 3 "~" H 3000 10150 50  0001 C CNN
+	1    3000 10150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3150 10150 3250 10150
+Wire Wire Line
+	3250 10150 3250 10350
+Connection ~ 3250 10350
+Wire Wire Line
+	3250 10350 3000 10350
+$Comp
+L clock:LD1117V U2
+U 1 1 611BD3B2
+P 3000 9450
+F 0 "U2" H 3000 9737 60  0000 C CNN
+F 1 "LD1117V" H 3000 9631 60  0000 C CNN
+F 2 "digikey-footprints:TO-220-3" H 3200 9650 60  0001 L CNN
+F 3 "http://www.st.com/content/ccc/resource/technical/document/datasheet/99/3b/7d/91/91/51/4b/be/CD00000544.pdf/files/CD00000544.pdf/jcr:content/translations/en.CD00000544.pdf" H 3200 9750 60  0001 L CNN
+F 4 "497-7310-5-ND" H 3200 9850 60  0001 L CNN "Digi-Key_PN"
+F 5 "LD1117V" H 3200 9950 60  0001 L CNN "MPN"
+F 6 "Integrated Circuits (ICs)" H 3200 10050 60  0001 L CNN "Category"
+F 7 "PMIC - Voltage Regulators - Linear" H 3200 10150 60  0001 L CNN "Family"
+F 8 "http://www.st.com/content/ccc/resource/technical/document/datasheet/99/3b/7d/91/91/51/4b/be/CD00000544.pdf/files/CD00000544.pdf/jcr:content/translations/en.CD00000544.pdf" H 3200 10250 60  0001 L CNN "DK_Datasheet_Link"
+F 9 "/product-detail/en/stmicroelectronics/LD1117V33/497-1491-5-ND/586012" H 3200 10350 60  0001 L CNN "DK_Detail_Page"
+F 10 "IC REG LINEAR 1.8V-5V 800MA TO220AB" H 3200 10450 60  0001 L CNN "Description"
+F 11 "STMicroelectronics" H 3200 10550 60  0001 L CNN "Manufacturer"
+F 12 "Active" H 3200 10650 60  0001 L CNN "Status"
+	1    3000 9450
+	1    0    0    -1  
+$EndComp
+Connection ~ 5350 10150
+Wire Wire Line
+	4275 10875 4275 10975
+Wire Wire Line
+	3975 10150 4475 10150
+Wire Wire Line
+	4275 10575 4275 10450
+Wire Wire Line
+	4275 10450 4475 10450
+Wire Wire Line
+	4675 10450 4675 10575
+Wire Wire Line
+	4475 10450 4475 10150
+Connection ~ 4475 10450
+Wire Wire Line
+	4475 10450 4675 10450
+Connection ~ 4475 10150
+Wire Wire Line
+	4475 10150 5350 10150
 $EndSCHEMATC

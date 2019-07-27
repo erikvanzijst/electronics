@@ -162,24 +162,6 @@ X F 9 -300 -200 100 R 50 50 1 1 I
 ENDDRAW
 ENDDEF
 #
-# Regulator_Linear_LM317L_TO92
-#
-DEF Regulator_Linear_LM317L_TO92 U 0 10 Y Y 1 F N
-F0 "U" -150 125 50 H V C CNN
-F1 "Regulator_Linear_LM317L_TO92" 0 125 50 H V L CNN
-F2 "Package_TO_SOT_THT:TO-92_Inline" 0 225 50 H I C CIN
-F3 "" 0 0 50 H I C CNN
-$FPLIST
- TO?92*
-$ENDFPLIST
-DRAW
-S -200 75 200 -200 0 1 10 f
-X ADJ 1 0 -300 100 U 50 50 1 1 I
-X VO 2 300 0 100 L 50 50 1 1 w
-X VI 3 -300 0 100 R 50 50 1 1 W
-ENDDRAW
-ENDDEF
-#
 # Sensor_Optical_VT93xx
 #
 DEF Sensor_Optical_VT93xx R 0 0 N Y 1 F N
@@ -405,6 +387,30 @@ X D 6 -300 0 100 R 50 50 1 1 I
 X A 7 -300 300 100 R 50 50 1 1 I
 X GND 8 0 -550 100 U 50 50 1 1 W
 X e 9 300 -100 100 L 50 50 1 1 O
+ENDDRAW
+ENDDEF
+#
+# clock_LD1117V
+#
+DEF clock_LD1117V U 0 20 Y Y 1 F N
+F0 "U" 0 150 60 H V C CNN
+F1 "clock_LD1117V" 0 250 60 H V C CNN
+F2 "digikey-footprints:TO-220-3" 200 200 60 H I L CNN
+F3 "" 200 300 60 H I L CNN
+F4 "497-7310-5-ND" 200 400 60 H I L CNN "Digi-Key_PN"
+F5 "LD1117V" 200 500 60 H I L CNN "MPN"
+F6 "Integrated Circuits (ICs)" 200 600 60 H I L CNN "Category"
+F7 "PMIC - Voltage Regulators - Linear" 200 700 60 H I L CNN "Family"
+F8 "http://www.st.com/content/ccc/resource/technical/document/datasheet/99/3b/7d/91/91/51/4b/be/CD00000544.pdf/files/CD00000544.pdf/jcr:content/translations/en.CD00000544.pdf" 200 800 60 H I L CNN "DK_Datasheet_Link"
+F9 "/product-detail/en/stmicroelectronics/LD1117V33/497-1491-5-ND/586012" 200 900 60 H I L CNN "DK_Detail_Page"
+F10 "IC REG LINEAR 1.8V-5V 800MA TO220AB" 200 1000 60 H I L CNN "Description"
+F11 "STMicroelectronics" 200 1100 60 H I L CNN "Manufacturer"
+F12 "Active" 200 1200 60 H I L CNN "Status"
+DRAW
+S -200 100 200 -200 1 1 0 f
+X GND 1 0 -300 100 U 50 50 1 1 W
+X VOUT 2 300 0 100 L 50 50 1 1 w
+X VIN 3 -300 0 100 R 50 50 1 1 W
 ENDDRAW
 ENDDEF
 #
