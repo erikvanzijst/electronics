@@ -1324,7 +1324,7 @@ L Device:C C11
 U 1 1 5D9C1C6A
 P 4875 11825
 F 0 "C11" H 4600 11850 50  0000 L CNN
-F 1 "100nF" H 4525 11750 50  0000 L CNN
+F 1 "47nF" H 4525 11750 50  0000 L CNN
 F 2 "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P2.50mm" H 4913 11675 50  0001 C CNN
 F 3 "~" H 4875 11825 50  0001 C CNN
 	1    4875 11825
@@ -1395,7 +1395,7 @@ L Device:R R9
 U 1 1 5DB7BBEA
 P 4675 10725
 F 0 "R9" H 4605 10679 50  0000 R CNN
-F 1 "100K" H 4605 10770 50  0000 R CNN
+F 1 "1M" H 4605 10770 50  0000 R CNN
 F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 4605 10725 50  0001 C CNN
 F 3 "~" H 4675 10725 50  0001 C CNN
 	1    4675 10725
@@ -1454,7 +1454,7 @@ L Device:R R11
 U 1 1 5DEB054B
 P 6700 11350
 F 0 "R11" H 6630 11304 50  0000 R CNN
-F 1 "100K" H 6630 11395 50  0000 R CNN
+F 1 "5.1K" H 6630 11395 50  0000 R CNN
 F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 6630 11350 50  0001 C CNN
 F 3 "~" H 6700 11350 50  0001 C CNN
 	1    6700 11350
@@ -1471,7 +1471,7 @@ L Device:R R10
 U 1 1 5E34B6A6
 P 5350 10550
 F 0 "R10" H 5280 10504 50  0000 R CNN
-F 1 "1K" H 5280 10595 50  0000 R CNN
+F 1 "10K" H 5280 10595 50  0000 R CNN
 F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 5280 10550 50  0001 C CNN
 F 3 "~" H 5350 10550 50  0001 C CNN
 	1    5350 10550
@@ -1682,17 +1682,6 @@ Wire Wire Line
 Connection ~ 3000 9800
 Wire Wire Line
 	3000 9800 3000 9900
-$Comp
-L Device:R_Pack07_SIP RN1
-U 1 1 5DE48A77
-P 8700 900
-F 0 "RN1" H 8754 1242 50  0000 C CNN
-F 1 "330" H 8754 1151 50  0000 C CNN
-F 2 "Resistor_THT:R_Array_SIP14" V 9875 900 50  0001 C CNN
-F 3 "http://www.vishay.com/docs/31509/csc.pdf" H 8700 900 50  0001 C CNN
-	1    8700 900 
-	1    0    0    -1  
-$EndComp
 Text GLabel 7100 2000 2    50   Input ~ 0
 GND
 $Comp
@@ -1764,17 +1753,6 @@ Wire Wire Line
 Connection ~ 6450 2600
 Wire Wire Line
 	6300 2700 6800 2700
-$Comp
-L Device:R_Pack07_SIP RN2
-U 1 1 5EB4E628
-P 8700 2150
-F 0 "RN2" H 8754 2492 50  0000 C CNN
-F 1 "330" H 8754 2401 50  0000 C CNN
-F 2 "Resistor_THT:R_Array_SIP14" V 9875 2150 50  0001 C CNN
-F 3 "http://www.vishay.com/docs/31509/csc.pdf" H 8700 2150 50  0001 C CNN
-	1    8700 2150
-	1    0    0    -1  
-$EndComp
 Text GLabel 7600 4600 1    50   Input ~ 0
 GND
 Text GLabel 6950 4600 0    50   Input ~ 0
@@ -1803,28 +1781,6 @@ Wire Wire Line
 Connection ~ 6400 6250
 Wire Wire Line
 	6300 6350 6800 6350
-$Comp
-L Device:R_Pack07_SIP RN3
-U 1 1 5F389E95
-P 8700 4550
-F 0 "RN3" H 8754 4892 50  0000 C CNN
-F 1 "330" H 8754 4801 50  0000 C CNN
-F 2 "Resistor_THT:R_Array_SIP14" V 9875 4550 50  0001 C CNN
-F 3 "http://www.vishay.com/docs/31509/csc.pdf" H 8700 4550 50  0001 C CNN
-	1    8700 4550
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R_Pack07_SIP RN4
-U 1 1 5F3CBB8F
-P 8700 5800
-F 0 "RN4" H 8754 6142 50  0000 C CNN
-F 1 "330" H 8754 6051 50  0000 C CNN
-F 2 "Resistor_THT:R_Array_SIP14" V 9875 5800 50  0001 C CNN
-F 3 "http://www.vishay.com/docs/31509/csc.pdf" H 8700 5800 50  0001 C CNN
-	1    8700 5800
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	10500 1750 10650 1750
 Wire Wire Line
@@ -1872,20 +1828,9 @@ Wire Wire Line
 	7100 8050 7300 8050
 Connection ~ 7100 8050
 Wire Wire Line
-	10650 10900 7450 10900
+	10650 11075 7450 11075
 Wire Wire Line
-	7450 10900 7450 11150
-$Comp
-L Device:R_Pack07_SIP RN5
-U 1 1 5FD7C29C
-P 8700 8000
-F 0 "RN5" H 8754 8342 50  0000 C CNN
-F 1 "330" H 8754 8251 50  0000 C CNN
-F 2 "Resistor_THT:R_Array_SIP14" V 9875 8000 50  0001 C CNN
-F 3 "http://www.vishay.com/docs/31509/csc.pdf" H 8700 8000 50  0001 C CNN
-	1    8700 8000
-	1    0    0    -1  
-$EndComp
+	7450 11075 7450 11150
 Wire Wire Line
 	6400 9600 6400 9250
 Wire Wire Line
@@ -1937,23 +1882,12 @@ Wire Wire Line
 	6400 9600 6800 9600
 Wire Wire Line
 	6450 9500 6800 9500
-$Comp
-L Device:R_Pack07_SIP RN6
-U 1 1 5FDBF7D7
-P 8700 9250
-F 0 "RN6" H 8754 9592 50  0000 C CNN
-F 1 "330" H 8754 9501 50  0000 C CNN
-F 2 "Resistor_THT:R_Array_SIP14" V 9875 9250 50  0001 C CNN
-F 3 "http://www.vishay.com/docs/31509/csc.pdf" H 8700 9250 50  0001 C CNN
-	1    8700 9250
-	1    0    0    -1  
-$EndComp
 NoConn ~ 9900 10200
 NoConn ~ 9900 8950
 Connection ~ 10650 10200
 Connection ~ 10650 10100
 Wire Wire Line
-	10650 10200 10650 10900
+	10650 10200 10650 11075
 Connection ~ 10650 8950
 Connection ~ 10650 8850
 Wire Wire Line
@@ -1994,342 +1928,6 @@ F 3 "http://www.kingbright.com/attachments/file/psearch/000/00/00/KCSC02-105(Ver
 	1    10200 8550
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	7400 1550 7800 1550
-Wire Wire Line
-	7800 1550 7800 1100
-Wire Wire Line
-	7900 1100 7900 1550
-Wire Wire Line
-	7900 1550 9900 1550
-Wire Wire Line
-	7400 1450 8100 1450
-Wire Wire Line
-	8100 1450 8100 1100
-Wire Wire Line
-	8200 1100 8200 1450
-Wire Wire Line
-	8200 1450 9900 1450
-Wire Wire Line
-	7400 1350 8400 1350
-Wire Wire Line
-	8400 1350 8400 1100
-Wire Wire Line
-	8500 1100 8500 1350
-Wire Wire Line
-	8500 1350 9900 1350
-Wire Wire Line
-	7400 1250 8700 1250
-Wire Wire Line
-	8700 1250 8700 1100
-Wire Wire Line
-	8800 1100 8800 1250
-Wire Wire Line
-	8800 1250 9900 1250
-Wire Wire Line
-	7400 1150 9000 1150
-Wire Wire Line
-	9000 1150 9000 1100
-Wire Wire Line
-	9100 1100 9100 1150
-Wire Wire Line
-	9100 1150 9900 1150
-Wire Wire Line
-	7400 1750 9300 1750
-Wire Wire Line
-	9300 1750 9300 1100
-Wire Wire Line
-	9400 1100 9400 1750
-Wire Wire Line
-	9400 1750 9900 1750
-Wire Wire Line
-	7400 1650 9600 1650
-Wire Wire Line
-	9600 1650 9600 1100
-Wire Wire Line
-	9700 1100 9700 1650
-Wire Wire Line
-	9700 1650 9900 1650
-Wire Wire Line
-	7400 2800 7800 2800
-Wire Wire Line
-	7800 2800 7800 2350
-Wire Wire Line
-	7900 2350 7900 2800
-Wire Wire Line
-	7900 2800 9900 2800
-Wire Wire Line
-	7400 2700 8100 2700
-Wire Wire Line
-	8100 2700 8100 2350
-Wire Wire Line
-	8200 2350 8200 2700
-Wire Wire Line
-	8200 2700 9900 2700
-Wire Wire Line
-	7400 2600 8400 2600
-Wire Wire Line
-	8400 2600 8400 2350
-Wire Wire Line
-	8500 2350 8500 2600
-Wire Wire Line
-	8500 2600 9900 2600
-Wire Wire Line
-	7400 2500 8700 2500
-Wire Wire Line
-	8700 2500 8700 2350
-Wire Wire Line
-	8800 2350 8800 2500
-Wire Wire Line
-	8800 2500 9900 2500
-Wire Wire Line
-	7400 2400 9000 2400
-Wire Wire Line
-	9000 2400 9000 2350
-Wire Wire Line
-	9100 2350 9100 2400
-Wire Wire Line
-	9100 2400 9900 2400
-Wire Wire Line
-	7400 3000 9300 3000
-Wire Wire Line
-	9300 3000 9300 2350
-Wire Wire Line
-	9400 2350 9400 3000
-Wire Wire Line
-	9400 3000 9900 3000
-Wire Wire Line
-	7400 2900 9600 2900
-Wire Wire Line
-	9600 2900 9600 2350
-Wire Wire Line
-	9700 2350 9700 2900
-Wire Wire Line
-	9700 2900 9900 2900
-Wire Wire Line
-	7400 6450 7800 6450
-Wire Wire Line
-	7800 6450 7800 6000
-Wire Wire Line
-	7900 6000 7900 6450
-Wire Wire Line
-	7900 6450 9900 6450
-Wire Wire Line
-	7400 6350 8100 6350
-Wire Wire Line
-	8100 6350 8100 6000
-Wire Wire Line
-	8200 6000 8200 6350
-Wire Wire Line
-	8200 6350 9900 6350
-Wire Wire Line
-	7400 6250 8400 6250
-Wire Wire Line
-	8400 6250 8400 6000
-Wire Wire Line
-	8500 6000 8500 6250
-Wire Wire Line
-	8500 6250 9900 6250
-Wire Wire Line
-	7400 6150 8700 6150
-Wire Wire Line
-	8700 6150 8700 6000
-Wire Wire Line
-	8800 6000 8800 6150
-Wire Wire Line
-	8800 6150 9900 6150
-Wire Wire Line
-	7400 6050 9000 6050
-Wire Wire Line
-	9000 6050 9000 6000
-Wire Wire Line
-	9100 6000 9100 6050
-Wire Wire Line
-	9100 6050 9900 6050
-Wire Wire Line
-	7400 6650 9300 6650
-Wire Wire Line
-	9300 6650 9300 6000
-Wire Wire Line
-	9400 6000 9400 6650
-Wire Wire Line
-	9400 6650 9900 6650
-Wire Wire Line
-	7400 6550 9600 6550
-Wire Wire Line
-	9600 6550 9600 6000
-Wire Wire Line
-	9700 6000 9700 6550
-Wire Wire Line
-	9700 6550 9900 6550
-Wire Wire Line
-	7400 5200 9600 5200
-Wire Wire Line
-	9600 5200 9600 4750
-Wire Wire Line
-	9700 4750 9700 5200
-Wire Wire Line
-	9700 5200 9900 5200
-Wire Wire Line
-	7400 5100 9300 5100
-Wire Wire Line
-	9300 5100 9300 4750
-Wire Wire Line
-	9400 4750 9400 5100
-Wire Wire Line
-	9400 5100 9900 5100
-Wire Wire Line
-	7400 5000 9000 5000
-Wire Wire Line
-	9000 5000 9000 4750
-Wire Wire Line
-	9100 4750 9100 5000
-Wire Wire Line
-	9100 5000 9900 5000
-Wire Wire Line
-	7400 4900 8700 4900
-Wire Wire Line
-	8700 4900 8700 4750
-Wire Wire Line
-	8800 4750 8800 4900
-Wire Wire Line
-	8800 4900 9900 4900
-Wire Wire Line
-	7400 4800 8400 4800
-Wire Wire Line
-	8400 4800 8400 4750
-Wire Wire Line
-	8500 4750 8500 4800
-Wire Wire Line
-	8500 4800 9900 4800
-Wire Wire Line
-	7400 5400 8100 5400
-Wire Wire Line
-	8100 5400 8100 4750
-Wire Wire Line
-	8200 4750 8200 5400
-Wire Wire Line
-	8200 5400 9900 5400
-Wire Wire Line
-	7400 5300 7800 5300
-Wire Wire Line
-	7800 5300 7800 4750
-Wire Wire Line
-	7900 4750 7900 5300
-Wire Wire Line
-	7900 5300 9900 5300
-Wire Wire Line
-	7400 8650 7800 8650
-Wire Wire Line
-	7800 8650 7800 8200
-Wire Wire Line
-	7900 8200 7900 8650
-Wire Wire Line
-	7900 8650 9900 8650
-Wire Wire Line
-	7400 8550 8100 8550
-Wire Wire Line
-	8100 8550 8100 8200
-Wire Wire Line
-	8200 8200 8200 8550
-Wire Wire Line
-	8200 8550 9900 8550
-Wire Wire Line
-	7400 8450 8400 8450
-Wire Wire Line
-	8400 8450 8400 8200
-Wire Wire Line
-	8500 8200 8500 8450
-Wire Wire Line
-	8500 8450 9900 8450
-Wire Wire Line
-	7400 8350 8700 8350
-Wire Wire Line
-	8700 8350 8700 8200
-Wire Wire Line
-	8800 8200 8800 8350
-Wire Wire Line
-	8800 8350 9900 8350
-Wire Wire Line
-	7400 8250 9000 8250
-Wire Wire Line
-	9000 8250 9000 8200
-Wire Wire Line
-	9100 8200 9100 8250
-Wire Wire Line
-	9100 8250 9900 8250
-Wire Wire Line
-	7400 8850 9300 8850
-Wire Wire Line
-	9300 8850 9300 8200
-Wire Wire Line
-	9400 8200 9400 8850
-Wire Wire Line
-	9400 8850 9900 8850
-Wire Wire Line
-	7400 8750 9600 8750
-Wire Wire Line
-	9600 8750 9600 8200
-Wire Wire Line
-	9700 8200 9700 8750
-Wire Wire Line
-	9700 8750 9900 8750
-Wire Wire Line
-	7400 9900 9600 9900
-Wire Wire Line
-	9600 9900 9600 9450
-Wire Wire Line
-	9700 9450 9700 9900
-Wire Wire Line
-	9700 9900 9900 9900
-Wire Wire Line
-	7400 9800 9300 9800
-Wire Wire Line
-	9300 9800 9300 9450
-Wire Wire Line
-	9400 9450 9400 9800
-Wire Wire Line
-	9400 9800 9900 9800
-Wire Wire Line
-	7400 9700 9000 9700
-Wire Wire Line
-	9000 9700 9000 9450
-Wire Wire Line
-	9100 9450 9100 9700
-Wire Wire Line
-	9100 9700 9900 9700
-Wire Wire Line
-	7400 9600 8700 9600
-Wire Wire Line
-	8700 9600 8700 9450
-Wire Wire Line
-	8800 9450 8800 9600
-Wire Wire Line
-	8800 9600 9900 9600
-Wire Wire Line
-	7400 9500 8400 9500
-Wire Wire Line
-	8400 9500 8400 9450
-Wire Wire Line
-	8500 9450 8500 9500
-Wire Wire Line
-	8500 9500 9900 9500
-Wire Wire Line
-	7400 10100 8100 10100
-Wire Wire Line
-	8100 10100 8100 9450
-Wire Wire Line
-	8200 9450 8200 10100
-Wire Wire Line
-	8200 10100 9900 10100
-Wire Wire Line
-	7400 10000 7800 10000
-Wire Wire Line
-	7800 10000 7800 9450
-Wire Wire Line
-	7900 9450 7900 10000
-Wire Wire Line
-	7900 10000 9900 10000
 $Comp
 L Device:R_POT_TRIM RV1
 U 1 1 610D8243
@@ -2387,4 +1985,638 @@ Wire Wire Line
 Connection ~ 4475 10150
 Wire Wire Line
 	4475 10150 5350 10150
+$Comp
+L Device:R_Pack05_SIP RN9
+U 1 1 62771CF0
+P 8750 4975
+F 0 "RN9" H 8804 5317 50  0000 C CNN
+F 1 "R_Pack05_SIP" H 8804 5226 50  0000 C CNN
+F 2 "Resistor_THT:R_Array_SIP10" V 9625 4975 50  0001 C CNN
+F 3 "http://www.vishay.com/docs/31509/csc.pdf" H 8750 4975 50  0001 C CNN
+	1    8750 4975
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_Pack04_SIP RN1
+U 1 1 627EB60B
+P 8650 825
+F 0 "RN1" H 8100 1050 50  0000 L CNN
+F 1 "R_Pack04_SIP" H 8375 1050 50  0000 L CNN
+F 2 "Resistor_THT:R_Array_SIP8" V 9325 825 50  0001 C CNN
+F 3 "http://www.vishay.com/docs/31509/csc.pdf" H 8650 825 50  0001 C CNN
+	1    8650 825 
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_Pack04_SIP RN2
+U 1 1 627ECC56
+P 8650 1775
+F 0 "RN2" H 8100 2000 50  0000 L CNN
+F 1 "R_Pack04_SIP" H 8375 2000 50  0000 L CNN
+F 2 "Resistor_THT:R_Array_SIP8" V 9325 1775 50  0001 C CNN
+F 3 "http://www.vishay.com/docs/31509/csc.pdf" H 8650 1775 50  0001 C CNN
+	1    8650 1775
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_Pack04_SIP RN3
+U 1 1 627ED809
+P 8650 2725
+F 0 "RN3" H 8100 2950 50  0000 L CNN
+F 1 "R_Pack04_SIP" H 8375 2950 50  0000 L CNN
+F 2 "Resistor_THT:R_Array_SIP8" V 9325 2725 50  0001 C CNN
+F 3 "http://www.vishay.com/docs/31509/csc.pdf" H 8650 2725 50  0001 C CNN
+	1    8650 2725
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_Pack04_SIP RN4
+U 1 1 627EE04A
+P 8650 3675
+F 0 "RN4" H 8100 3900 50  0000 L CNN
+F 1 "R_Pack04_SIP" H 8375 3900 50  0000 L CNN
+F 2 "Resistor_THT:R_Array_SIP8" V 9325 3675 50  0001 C CNN
+F 3 "http://www.vishay.com/docs/31509/csc.pdf" H 8650 3675 50  0001 C CNN
+	1    8650 3675
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_Pack05_SIP RN10
+U 1 1 62820F5D
+P 8750 6475
+F 0 "RN10" H 8804 6817 50  0000 C CNN
+F 1 "R_Pack05_SIP" H 8804 6726 50  0000 C CNN
+F 2 "Resistor_THT:R_Array_SIP10" V 9625 6475 50  0001 C CNN
+F 3 "http://www.vishay.com/docs/31509/csc.pdf" H 8750 6475 50  0001 C CNN
+	1    8750 6475
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_Pack04_SIP RN5
+U 1 1 6287AF57
+P 8650 7575
+F 0 "RN5" H 8100 7800 50  0000 L CNN
+F 1 "R_Pack04_SIP" H 8375 7800 50  0000 L CNN
+F 2 "Resistor_THT:R_Array_SIP8" V 9325 7575 50  0001 C CNN
+F 3 "http://www.vishay.com/docs/31509/csc.pdf" H 8650 7575 50  0001 C CNN
+	1    8650 7575
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_Pack04_SIP RN6
+U 1 1 6287AF61
+P 8650 8525
+F 0 "RN6" H 8100 8750 50  0000 L CNN
+F 1 "R_Pack04_SIP" H 8375 8750 50  0000 L CNN
+F 2 "Resistor_THT:R_Array_SIP8" V 9325 8525 50  0001 C CNN
+F 3 "http://www.vishay.com/docs/31509/csc.pdf" H 8650 8525 50  0001 C CNN
+	1    8650 8525
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_Pack04_SIP RN7
+U 1 1 6287AF6B
+P 8650 9475
+F 0 "RN7" H 8100 9700 50  0000 L CNN
+F 1 "R_Pack04_SIP" H 8375 9700 50  0000 L CNN
+F 2 "Resistor_THT:R_Array_SIP8" V 9325 9475 50  0001 C CNN
+F 3 "http://www.vishay.com/docs/31509/csc.pdf" H 8650 9475 50  0001 C CNN
+	1    8650 9475
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_Pack04_SIP RN8
+U 1 1 6287AF75
+P 8650 10425
+F 0 "RN8" H 8100 10650 50  0000 L CNN
+F 1 "R_Pack04_SIP" H 8375 10650 50  0000 L CNN
+F 2 "Resistor_THT:R_Array_SIP8" V 9325 10425 50  0001 C CNN
+F 3 "http://www.vishay.com/docs/31509/csc.pdf" H 8650 10425 50  0001 C CNN
+	1    8650 10425
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7400 1650 8050 1650
+Wire Wire Line
+	8050 1650 8050 1475
+Wire Wire Line
+	8050 1475 9050 1475
+Wire Wire Line
+	9050 1475 9050 1025
+Wire Wire Line
+	7400 1750 8050 1750
+Wire Wire Line
+	8050 1750 8050 2050
+Wire Wire Line
+	8050 2050 9050 2050
+Wire Wire Line
+	9050 2050 9050 1975
+Wire Wire Line
+	7400 1150 8750 1150
+Wire Wire Line
+	8750 1150 8750 1025
+Wire Wire Line
+	7400 1250 7975 1250
+Wire Wire Line
+	7975 1250 7975 2125
+Wire Wire Line
+	7975 2125 8750 2125
+Wire Wire Line
+	8750 2125 8750 1975
+Wire Wire Line
+	7400 1350 8450 1350
+Wire Wire Line
+	8450 1350 8450 1025
+Wire Wire Line
+	7400 1450 7900 1450
+Wire Wire Line
+	7900 1450 7900 2200
+Wire Wire Line
+	7900 2200 8450 2200
+Wire Wire Line
+	8450 2200 8450 1975
+Wire Wire Line
+	7400 1550 7825 1550
+Wire Wire Line
+	7825 1550 7825 1075
+Wire Wire Line
+	7825 1075 8150 1075
+Wire Wire Line
+	8150 1075 8150 1025
+Wire Wire Line
+	8850 1025 8850 1150
+Wire Wire Line
+	8850 1150 9900 1150
+Wire Wire Line
+	8850 1975 8850 2125
+Wire Wire Line
+	8850 2125 9425 2125
+Wire Wire Line
+	9425 2125 9425 1250
+Wire Wire Line
+	9425 1250 9900 1250
+Wire Wire Line
+	8550 1025 8550 1350
+Wire Wire Line
+	8550 1350 9900 1350
+Wire Wire Line
+	8550 1975 8550 2200
+Wire Wire Line
+	8550 2200 9525 2200
+Wire Wire Line
+	9525 2200 9525 1450
+Wire Wire Line
+	9525 1450 9900 1450
+Wire Wire Line
+	8250 1025 8250 1075
+Wire Wire Line
+	8250 1075 9625 1075
+Wire Wire Line
+	9625 1075 9625 1550
+Wire Wire Line
+	9625 1550 9900 1550
+Wire Wire Line
+	9150 1025 9150 1475
+Wire Wire Line
+	9150 1475 9325 1475
+Wire Wire Line
+	9325 1475 9325 1650
+Wire Wire Line
+	9325 1650 9900 1650
+Wire Wire Line
+	9150 1975 9150 2050
+Wire Wire Line
+	9150 2050 9325 2050
+Wire Wire Line
+	9325 2050 9325 1750
+Wire Wire Line
+	9325 1750 9900 1750
+Wire Wire Line
+	7400 2900 8050 2900
+Wire Wire Line
+	8050 2900 8050 2275
+Wire Wire Line
+	8050 2275 8150 2275
+Wire Wire Line
+	8150 2275 8150 1975
+Wire Wire Line
+	8250 1975 8250 2275
+Wire Wire Line
+	8250 2275 9325 2275
+Wire Wire Line
+	9325 2275 9325 2900
+Wire Wire Line
+	9325 2900 9900 2900
+Wire Wire Line
+	7400 3000 9050 3000
+Wire Wire Line
+	9050 3000 9050 2925
+Wire Wire Line
+	9150 2925 9150 3000
+Wire Wire Line
+	9150 3000 9900 3000
+Wire Wire Line
+	7400 2400 7975 2400
+Wire Wire Line
+	7975 2400 7975 3950
+Wire Wire Line
+	7975 3950 9050 3950
+Wire Wire Line
+	9050 3950 9050 3875
+Wire Wire Line
+	9150 3875 9150 3950
+Wire Wire Line
+	9150 3950 9425 3950
+Wire Wire Line
+	9425 3950 9425 2400
+Wire Wire Line
+	9425 2400 9900 2400
+Wire Wire Line
+	7400 2500 7900 2500
+Wire Wire Line
+	7900 2500 7900 3100
+Wire Wire Line
+	7900 3100 8750 3100
+Wire Wire Line
+	8750 3100 8750 2925
+Wire Wire Line
+	8850 2925 8850 3100
+Wire Wire Line
+	8850 3100 9525 3100
+Wire Wire Line
+	9525 3100 9525 2500
+Wire Wire Line
+	9525 2500 9900 2500
+Wire Wire Line
+	7400 2600 7825 2600
+Wire Wire Line
+	7825 2600 7825 4025
+Wire Wire Line
+	7825 4025 8750 4025
+Wire Wire Line
+	8750 4025 8750 3875
+Wire Wire Line
+	8850 3875 8850 4025
+Wire Wire Line
+	8850 4025 9625 4025
+Wire Wire Line
+	9625 4025 9625 2600
+Wire Wire Line
+	9625 2600 9900 2600
+Wire Wire Line
+	7400 2700 7750 2700
+Wire Wire Line
+	7750 2700 7750 3200
+Wire Wire Line
+	7750 3200 8450 3200
+Wire Wire Line
+	8450 3200 8450 2925
+Wire Wire Line
+	8550 2925 8550 3200
+Wire Wire Line
+	8550 3200 9725 3200
+Wire Wire Line
+	9725 3200 9725 2700
+Wire Wire Line
+	9725 2700 9900 2700
+Wire Wire Line
+	7400 2800 7700 2800
+Wire Wire Line
+	7700 2800 7700 4100
+Wire Wire Line
+	7700 4100 8450 4100
+Wire Wire Line
+	8450 4100 8450 3875
+Wire Wire Line
+	8550 3875 8550 4100
+Wire Wire Line
+	8550 4100 9825 4100
+Wire Wire Line
+	9825 4100 9825 2800
+Wire Wire Line
+	9825 2800 9900 2800
+Wire Wire Line
+	7400 5300 7975 5300
+Wire Wire Line
+	7975 5300 7975 4175
+Wire Wire Line
+	7975 4175 8150 4175
+Wire Wire Line
+	8150 4175 8150 3875
+Wire Wire Line
+	8250 3875 8250 4175
+Wire Wire Line
+	8250 4175 9625 4175
+Wire Wire Line
+	9625 4175 9625 5300
+Wire Wire Line
+	9625 5300 9900 5300
+Wire Wire Line
+	7400 5400 7900 5400
+Wire Wire Line
+	7900 5400 7900 3300
+Wire Wire Line
+	7900 3300 8150 3300
+Wire Wire Line
+	8150 3300 8150 2925
+Wire Wire Line
+	8250 2925 8250 3300
+Wire Wire Line
+	8250 3300 9725 3300
+Wire Wire Line
+	9725 3300 9725 5400
+Wire Wire Line
+	9725 5400 9900 5400
+Wire Wire Line
+	7400 4800 8050 4800
+Wire Wire Line
+	8050 4800 8050 6750
+Wire Wire Line
+	8050 6750 9350 6750
+Wire Wire Line
+	9350 6750 9350 6675
+Wire Wire Line
+	9450 6675 9450 6750
+Wire Wire Line
+	9450 6750 9550 6750
+Wire Wire Line
+	9550 6750 9550 4800
+Wire Wire Line
+	9550 4800 9900 4800
+Wire Wire Line
+	7400 4900 7825 4900
+Wire Wire Line
+	7825 4900 7825 5250
+Wire Wire Line
+	7825 5250 9350 5250
+Wire Wire Line
+	9350 5250 9350 5175
+Wire Wire Line
+	9450 5175 9450 5250
+Wire Wire Line
+	9450 5250 9675 5250
+Wire Wire Line
+	9675 5250 9675 4900
+Wire Wire Line
+	9675 4900 9900 4900
+Wire Wire Line
+	7400 5000 7775 5000
+Wire Wire Line
+	7775 5000 7775 6825
+Wire Wire Line
+	7775 6825 9050 6825
+Wire Wire Line
+	9050 6825 9050 6675
+Wire Wire Line
+	9150 6675 9150 6825
+Wire Wire Line
+	9150 6825 9775 6825
+Wire Wire Line
+	9775 6825 9775 5000
+Wire Wire Line
+	9775 5000 9900 5000
+Wire Wire Line
+	7400 5100 7625 5100
+Wire Wire Line
+	7625 5100 7625 5475
+Wire Wire Line
+	7625 5475 9050 5475
+Wire Wire Line
+	9050 5475 9050 5175
+Wire Wire Line
+	9150 5175 9150 5475
+Wire Wire Line
+	9150 5475 9825 5475
+Wire Wire Line
+	9825 5475 9825 5100
+Wire Wire Line
+	9825 5100 9900 5100
+Wire Wire Line
+	7400 5200 7700 5200
+Wire Wire Line
+	7700 5200 7700 6900
+Wire Wire Line
+	7700 6900 8750 6900
+Wire Wire Line
+	8750 6900 8750 6675
+Wire Wire Line
+	8850 6675 8850 6900
+Wire Wire Line
+	8850 6900 9600 6900
+Wire Wire Line
+	9600 6900 9600 5200
+Wire Wire Line
+	9600 5200 9900 5200
+Wire Wire Line
+	7400 6550 7975 6550
+Wire Wire Line
+	7975 6550 7975 5400
+Wire Wire Line
+	7975 5400 8750 5400
+Wire Wire Line
+	8750 5400 8750 5175
+Wire Wire Line
+	8850 5175 8850 5400
+Wire Wire Line
+	8850 5400 9675 5400
+Wire Wire Line
+	9675 5400 9675 6550
+Wire Wire Line
+	9675 6550 9900 6550
+Wire Wire Line
+	7400 6650 7450 6650
+Wire Wire Line
+	7450 6650 7450 6975
+Wire Wire Line
+	7450 6975 8450 6975
+Wire Wire Line
+	8450 6975 8450 6675
+Wire Wire Line
+	8550 6675 8550 6975
+Wire Wire Line
+	8550 6975 9850 6975
+Wire Wire Line
+	9850 6975 9850 6650
+Wire Wire Line
+	9850 6650 9900 6650
+Wire Wire Line
+	7400 6050 8450 6050
+Wire Wire Line
+	8450 6050 8450 5175
+Wire Wire Line
+	8550 5175 8550 6050
+Wire Wire Line
+	8550 6050 9900 6050
+Wire Wire Line
+	7400 6150 7500 6150
+Wire Wire Line
+	7500 6150 7500 7050
+Wire Wire Line
+	7500 7050 8150 7050
+Wire Wire Line
+	8150 7050 8150 6675
+Wire Wire Line
+	8250 6675 8250 7050
+Wire Wire Line
+	8250 7050 9825 7050
+Wire Wire Line
+	9825 7050 9825 6150
+Wire Wire Line
+	9825 6150 9900 6150
+Wire Wire Line
+	7400 6250 8150 6250
+Wire Wire Line
+	8150 6250 8150 5175
+Wire Wire Line
+	8250 5175 8250 5975
+Wire Wire Line
+	8250 5975 9150 5975
+Wire Wire Line
+	9150 5975 9150 6250
+Wire Wire Line
+	9150 6250 9900 6250
+Wire Wire Line
+	7400 6350 7925 6350
+Wire Wire Line
+	7925 6350 7925 8800
+Wire Wire Line
+	7925 8800 9050 8800
+Wire Wire Line
+	9050 8800 9050 8725
+Wire Wire Line
+	9150 8725 9150 8800
+Wire Wire Line
+	9150 8800 9650 8800
+Wire Wire Line
+	9650 8800 9650 6350
+Wire Wire Line
+	9650 6350 9900 6350
+Wire Wire Line
+	7400 6450 7850 6450
+Wire Wire Line
+	7850 6450 7850 7875
+Wire Wire Line
+	7850 7875 9050 7875
+Wire Wire Line
+	9050 7875 9050 7775
+Wire Wire Line
+	9150 7775 9150 7875
+Wire Wire Line
+	9150 7875 9725 7875
+Wire Wire Line
+	9725 7875 9725 6450
+Wire Wire Line
+	9725 6450 9900 6450
+Wire Wire Line
+	7400 8750 7875 8750
+Wire Wire Line
+	7875 8750 7875 8850
+Wire Wire Line
+	7875 8850 8750 8850
+Wire Wire Line
+	8750 8850 8750 8725
+Wire Wire Line
+	8850 8725 8850 8850
+Wire Wire Line
+	8850 8850 9700 8850
+Wire Wire Line
+	9700 8850 9700 8750
+Wire Wire Line
+	9700 8750 9900 8750
+Wire Wire Line
+	7400 8850 7825 8850
+Wire Wire Line
+	7825 8850 7825 7950
+Wire Wire Line
+	7825 7950 8750 7950
+Wire Wire Line
+	8750 7950 8750 7775
+Wire Wire Line
+	8850 7775 8850 7950
+Wire Wire Line
+	8850 7950 9750 7950
+Wire Wire Line
+	9750 7950 9750 8850
+Wire Wire Line
+	9750 8850 9900 8850
+Wire Wire Line
+	7400 8250 7750 8250
+Wire Wire Line
+	7750 8250 7750 8900
+Wire Wire Line
+	7750 8900 8450 8900
+Wire Wire Line
+	8450 8900 8450 8725
+Wire Wire Line
+	8550 8725 8550 8900
+Wire Wire Line
+	8550 8900 9575 8900
+Wire Wire Line
+	9575 8900 9575 8250
+Wire Wire Line
+	9575 8250 9900 8250
+Wire Wire Line
+	7400 8350 7650 8350
+Wire Wire Line
+	7650 8350 7650 8050
+Wire Wire Line
+	7650 8050 8450 8050
+Wire Wire Line
+	8450 8050 8450 7775
+Wire Wire Line
+	8550 7775 8550 8050
+Wire Wire Line
+	8550 8050 9475 8050
+Wire Wire Line
+	9475 8050 9475 8350
+Wire Wire Line
+	9475 8350 9900 8350
+Wire Wire Line
+	7400 8450 7650 8450
+Wire Wire Line
+	7650 8450 7650 8950
+Wire Wire Line
+	7650 8950 8150 8950
+Wire Wire Line
+	8150 8950 8150 8725
+Wire Wire Line
+	8250 8725 8250 8950
+Wire Wire Line
+	8250 8950 9475 8950
+Wire Wire Line
+	9475 8950 9475 8450
+Wire Wire Line
+	9475 8450 9900 8450
+Wire Wire Line
+	7400 8550 8025 8550
+Wire Wire Line
+	8025 8550 8025 8150
+Wire Wire Line
+	8025 8150 8150 8150
+Wire Wire Line
+	8150 8150 8150 7775
+Wire Wire Line
+	8250 7775 8250 8150
+Wire Wire Line
+	8250 8150 9375 8150
+Wire Wire Line
+	9375 8150 9375 8550
+Wire Wire Line
+	9375 8550 9900 8550
+Wire Wire Line
+	7400 8650 8025 8650
+Wire Wire Line
+	8025 8650 8025 10725
+Wire Wire Line
+	8025 10725 9050 10725
+Wire Wire Line
+	9050 10725 9050 10625
+Wire Wire Line
+	9150 10625 9150 10725
+Wire Wire Line
+	9150 10725 9275 10725
+Wire Wire Line
+	9275 10725 9275 8650
+Wire Wire Line
+	9275 8650 9900 8650
 $EndSCHEMATC
