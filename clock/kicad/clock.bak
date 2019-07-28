@@ -349,8 +349,6 @@ Connection ~ 6250 2300
 Wire Wire Line
 	6250 2300 6450 2300
 Wire Wire Line
-	5300 2400 5100 2400
-Wire Wire Line
 	5150 2500 5300 2500
 Wire Wire Line
 	6200 3000 5350 3000
@@ -373,10 +371,6 @@ Wire Wire Line
 	6450 2600 6450 3150
 Wire Wire Line
 	6500 3200 6500 2500
-Wire Wire Line
-	5100 2400 5100 3300
-Wire Wire Line
-	5100 3300 6250 3300
 Text GLabel 6800 1700 0    50   Input ~ 0
 VCC
 Text GLabel 6800 1800 0    50   Input ~ 0
@@ -601,8 +595,6 @@ Wire Wire Line
 Wire Wire Line
 	4850 4400 5400 4400
 Text GLabel 5750 2750 3    50   Input ~ 0
-GND
-Text GLabel 5300 1950 0    50   Input ~ 0
 GND
 $Comp
 L clock:74HC08 U9
@@ -944,8 +936,6 @@ Wire Wire Line
 	2700 6200 1800 6200
 Wire Wire Line
 	1800 6200 1800 6500
-Wire Wire Line
-	1350 7400 2850 7400
 Text GLabel 3150 5400 0    50   Input ~ 0
 GND
 Text GLabel 4050 5400 2    50   Input ~ 0
@@ -997,9 +987,7 @@ GND
 Text GLabel 4350 7150 2    50   Input ~ 0
 VCC
 Wire Wire Line
-	2850 7400 2850 5050
-Wire Wire Line
-	2850 5050 3300 5050
+	2800 5050 3300 5050
 Wire Wire Line
 	3300 5050 3300 5100
 Wire Wire Line
@@ -1018,11 +1006,6 @@ Wire Wire Line
 	3300 5700 3300 6050
 Wire Wire Line
 	3400 5700 3400 5950
-Wire Wire Line
-	5100 3300 3600 3300
-Wire Wire Line
-	3600 3300 3600 5100
-Connection ~ 5100 3300
 Text GLabel 3800 5100 2    50   Input ~ 0
 GND
 Wire Wire Line
@@ -1391,11 +1374,11 @@ F 3 "~" H 4475 11200 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L Device:R R9
+L Device:R R10
 U 1 1 5DB7BBEA
 P 4675 10725
-F 0 "R9" H 4605 10679 50  0000 R CNN
-F 1 "1M" H 4605 10770 50  0000 R CNN
+F 0 "R10" H 4605 10679 50  0000 R CNN
+F 1 "470K" H 4605 10770 50  0000 R CNN
 F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 4605 10725 50  0001 C CNN
 F 3 "~" H 4675 10725 50  0001 C CNN
 	1    4675 10725
@@ -1410,10 +1393,10 @@ Wire Wire Line
 Wire Wire Line
 	6400 10150 5350 10150
 $Comp
-L Sensor_Optical:VT93xx R8
+L Sensor_Optical:VT93xx R9
 U 1 1 5DC80BDF
 P 4275 10725
-F 0 "R8" H 4345 10771 50  0000 L CNN
+F 0 "R9" H 4345 10771 50  0000 L CNN
 F 1 "VT93xx" H 4345 10680 50  0000 L CNN
 F 2 "OptoDevice:R_LDR_4.9x4.2mm_P2.54mm_Vertical" V 4450 10725 50  0001 C CNN
 F 3 "http://www.produktinfo.conrad.com/datenblaetter/125000-149999/140375-da-01-en-FOTOWIDERSTAND__VT_93_N2__THT_.pdf" H 4275 10675 50  0001 C CNN
@@ -1450,10 +1433,10 @@ $EndComp
 Wire Wire Line
 	6250 11350 6550 11350
 $Comp
-L Device:R R11
+L Device:R R12
 U 1 1 5DEB054B
 P 6700 11350
-F 0 "R11" H 6630 11304 50  0000 R CNN
+F 0 "R12" H 6630 11304 50  0000 R CNN
 F 1 "5.1K" H 6630 11395 50  0000 R CNN
 F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 6630 11350 50  0001 C CNN
 F 3 "~" H 6700 11350 50  0001 C CNN
@@ -1467,10 +1450,10 @@ GND
 Wire Wire Line
 	7450 11550 7450 11675
 $Comp
-L Device:R R10
+L Device:R R11
 U 1 1 5E34B6A6
 P 5350 10550
-F 0 "R10" H 5280 10504 50  0000 R CNN
+F 0 "R11" H 5280 10504 50  0000 R CNN
 F 1 "10K" H 5280 10595 50  0000 R CNN
 F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 5280 10550 50  0001 C CNN
 F 3 "~" H 5350 10550 50  0001 C CNN
@@ -1585,10 +1568,10 @@ $EndComp
 Wire Wire Line
 	1550 9150 1650 9150
 $Comp
-L Device:R R7
+L Device:R R8
 U 1 1 5DA44C3B
 P 3450 9700
-F 0 "R7" H 3520 9746 50  0000 L CNN
+F 0 "R8" H 3520 9746 50  0000 L CNN
 F 1 "220R" H 3520 9655 50  0000 L CNN
 F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 3380 9700 50  0001 C CNN
 F 3 "~" H 3450 9700 50  0001 C CNN
@@ -2715,4 +2698,88 @@ Wire Wire Line
 	8250 9675 8250 9900
 Wire Wire Line
 	8250 9900 9900 9900
+$Comp
+L Device:R R7
+U 1 1 644D937E
+P 2200 7400
+F 0 "R7" V 1993 7400 50  0000 C CNN
+F 1 "100K" V 2084 7400 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 2130 7400 50  0001 C CNN
+F 3 "~" H 2200 7400 50  0001 C CNN
+	1    2200 7400
+	0    1    1    0   
+$EndComp
+Text GLabel 2350 7400 2    50   Input ~ 0
+GND
+Wire Wire Line
+	1350 7400 1800 7400
+Wire Wire Line
+	2800 7025 1800 7025
+Wire Wire Line
+	1800 7025 1800 7400
+Wire Wire Line
+	2800 5050 2800 7025
+Connection ~ 1800 7400
+Wire Wire Line
+	1800 7400 2050 7400
+$Comp
+L Device:D D?
+U 1 1 64871AD3
+P 4300 3300
+F 0 "D?" V 4346 3221 50  0000 R CNN
+F 1 "D" V 4255 3221 50  0000 R CNN
+F 2 "digikey-footprints:Diode_DO-35_P10mm" H 4300 3300 50  0001 C CNN
+F 3 "~" H 4300 3300 50  0001 C CNN
+	1    4300 3300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:D D?
+U 1 1 64873A41
+P 3550 3300
+F 0 "D?" V 3596 3221 50  0000 R CNN
+F 1 "D" V 3505 3221 50  0000 R CNN
+F 2 "digikey-footprints:Diode_DO-35_P10mm" H 3550 3300 50  0001 C CNN
+F 3 "~" H 3550 3300 50  0001 C CNN
+	1    3550 3300
+	-1   0    0    1   
+$EndComp
+Connection ~ 2800 5050
+Wire Wire Line
+	3950 3050 4975 3050
+Wire Wire Line
+	4975 3050 4975 2400
+Wire Wire Line
+	4975 2400 5300 2400
+Wire Wire Line
+	2800 2825 4800 2825
+Wire Wire Line
+	4800 2825 4800 1950
+Wire Wire Line
+	4800 1950 5300 1950
+Wire Wire Line
+	3600 5100 3600 4725
+Wire Wire Line
+	3600 4725 4650 4725
+Wire Wire Line
+	4650 4725 4650 3300
+Wire Wire Line
+	4650 3300 6250 3300
+Wire Wire Line
+	4450 3300 4650 3300
+Connection ~ 4650 3300
+Wire Wire Line
+	3700 3300 3950 3300
+Wire Wire Line
+	3950 3050 3950 3300
+Connection ~ 3950 3300
+Wire Wire Line
+	3950 3300 4150 3300
+Wire Wire Line
+	2800 2825 2800 3300
+Wire Wire Line
+	3400 3300 2800 3300
+Connection ~ 2800 3300
+Wire Wire Line
+	2800 3300 2800 5050
 $EndSCHEMATC

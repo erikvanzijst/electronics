@@ -349,8 +349,6 @@ Connection ~ 6250 2300
 Wire Wire Line
 	6250 2300 6450 2300
 Wire Wire Line
-	5300 2400 5100 2400
-Wire Wire Line
 	5150 2500 5300 2500
 Wire Wire Line
 	6200 3000 5350 3000
@@ -373,10 +371,6 @@ Wire Wire Line
 	6450 2600 6450 3150
 Wire Wire Line
 	6500 3200 6500 2500
-Wire Wire Line
-	5100 2400 5100 3300
-Wire Wire Line
-	5100 3300 6250 3300
 Text GLabel 6800 1700 0    50   Input ~ 0
 VCC
 Text GLabel 6800 1800 0    50   Input ~ 0
@@ -601,8 +595,6 @@ Wire Wire Line
 Wire Wire Line
 	4850 4400 5400 4400
 Text GLabel 5750 2750 3    50   Input ~ 0
-GND
-Text GLabel 5300 1950 0    50   Input ~ 0
 GND
 $Comp
 L clock:74HC08 U9
@@ -1014,11 +1006,6 @@ Wire Wire Line
 	3300 5700 3300 6050
 Wire Wire Line
 	3400 5700 3400 5950
-Wire Wire Line
-	5100 3300 3600 3300
-Wire Wire Line
-	3600 3300 3600 5100
-Connection ~ 5100 3300
 Text GLabel 3800 5100 2    50   Input ~ 0
 GND
 Wire Wire Line
@@ -1391,7 +1378,7 @@ L Device:R R10
 U 1 1 5DB7BBEA
 P 4675 10725
 F 0 "R10" H 4605 10679 50  0000 R CNN
-F 1 "1M" H 4605 10770 50  0000 R CNN
+F 1 "470K" H 4605 10770 50  0000 R CNN
 F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 4605 10725 50  0001 C CNN
 F 3 "~" H 4675 10725 50  0001 C CNN
 	1    4675 10725
@@ -2735,4 +2722,64 @@ Wire Wire Line
 Connection ~ 1800 7400
 Wire Wire Line
 	1800 7400 2050 7400
+$Comp
+L Device:D D6
+U 1 1 64871AD3
+P 4300 3300
+F 0 "D6" V 4346 3221 50  0000 R CNN
+F 1 "D" V 4255 3221 50  0000 R CNN
+F 2 "digikey-footprints:Diode_DO-35_P10mm" H 4300 3300 50  0001 C CNN
+F 3 "~" H 4300 3300 50  0001 C CNN
+	1    4300 3300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:D D5
+U 1 1 64873A41
+P 3550 3300
+F 0 "D5" V 3596 3221 50  0000 R CNN
+F 1 "D" V 3505 3221 50  0000 R CNN
+F 2 "digikey-footprints:Diode_DO-35_P10mm" H 3550 3300 50  0001 C CNN
+F 3 "~" H 3550 3300 50  0001 C CNN
+	1    3550 3300
+	-1   0    0    1   
+$EndComp
+Connection ~ 2800 5050
+Wire Wire Line
+	3950 3050 4975 3050
+Wire Wire Line
+	4975 3050 4975 2400
+Wire Wire Line
+	4975 2400 5300 2400
+Wire Wire Line
+	2800 2825 4800 2825
+Wire Wire Line
+	4800 2825 4800 1950
+Wire Wire Line
+	4800 1950 5300 1950
+Wire Wire Line
+	3600 5100 3600 4725
+Wire Wire Line
+	3600 4725 4650 4725
+Wire Wire Line
+	4650 4725 4650 3300
+Wire Wire Line
+	4650 3300 6250 3300
+Wire Wire Line
+	4450 3300 4650 3300
+Connection ~ 4650 3300
+Wire Wire Line
+	3700 3300 3950 3300
+Wire Wire Line
+	3950 3050 3950 3300
+Connection ~ 3950 3300
+Wire Wire Line
+	3950 3300 4150 3300
+Wire Wire Line
+	2800 2825 2800 3300
+Wire Wire Line
+	3400 3300 2800 3300
+Connection ~ 2800 3300
+Wire Wire Line
+	2800 3300 2800 5050
 $EndSCHEMATC
