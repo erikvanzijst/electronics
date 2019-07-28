@@ -4364,7 +4364,7 @@
   (gr_text v01 (at 274.32 119.634) (layer B.Cu)
     (effects (font (size 1.5 1.5) (thickness 0.3)) (justify mirror))
   )
-  (gr_circle (center 200.66 105.41) (end 202.692 105.41) (layer Edge.Cuts) (width 0.05) (tstamp 5D2AC399))
+  (gr_circle (center 200.66 105.41) (end 202.41 105.41) (layer Edge.Cuts) (width 0.05) (tstamp 5D2AC399))
   (gr_text "github.com/erikvanzijst/clock\nerik.van.zijst@gmail.com" (at 268.351 126.238) (layer B.SilkS)
     (effects (font (size 1 1) (thickness 0.15)) (justify left mirror))
   )
