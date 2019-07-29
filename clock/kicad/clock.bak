@@ -176,7 +176,7 @@ Connection ~ 1800 1800
 Wire Wire Line
 	2550 2450 2550 2600
 Wire Wire Line
-	4100 2350 4100 2450
+	4100 2350 4100 2400
 Wire Wire Line
 	3600 1650 3550 1650
 Wire Wire Line
@@ -222,10 +222,6 @@ F 3 "" H 5750 2400 50  0001 C CNN
 	1    5750 2200
 	1    0    0    -1  
 $EndComp
-NoConn ~ 3600 1850
-NoConn ~ 3600 1950
-NoConn ~ 3600 2050
-NoConn ~ 3600 2150
 NoConn ~ 2950 2200
 NoConn ~ 2950 2100
 NoConn ~ 2950 2000
@@ -399,8 +395,6 @@ F 3 "http://www.kingbright.com/attachments/file/psearch/000/00/00/KCSC02-105(Ver
 	1    10200 2700
 	1    0    0    -1  
 $EndComp
-NoConn ~ 9900 1850
-NoConn ~ 9900 3100
 $Comp
 L clock:74HC390 U8
 U 1 1 5D185C43
@@ -516,7 +510,6 @@ F 3 "http://www.kingbright.com/attachments/file/psearch/000/00/00/KCSC02-105(Ver
 	1    10200 6350
 	1    0    0    -1  
 $EndComp
-NoConn ~ 9900 5500
 Wire Wire Line
 	5150 5200 5150 4300
 Wire Wire Line
@@ -707,7 +700,6 @@ Text GLabel 6800 6600 0    50   Input ~ 0
 VCC
 Text GLabel 6800 6700 0    50   Input ~ 0
 GND
-NoConn ~ 9900 6750
 Text GLabel 7100 6900 2    50   Input ~ 0
 GND
 NoConn ~ 5650 7750
@@ -1865,8 +1857,6 @@ Wire Wire Line
 	6400 9600 6800 9600
 Wire Wire Line
 	6450 9500 6800 9500
-NoConn ~ 9900 10200
-NoConn ~ 9900 8950
 Connection ~ 10650 10200
 Connection ~ 10650 10100
 Wire Wire Line
@@ -2170,10 +2160,6 @@ Wire Wire Line
 	9150 1975 9150 2050
 Wire Wire Line
 	9150 2050 9325 2050
-Wire Wire Line
-	9325 2050 9325 1750
-Wire Wire Line
-	9325 1750 9900 1750
 Wire Wire Line
 	7400 2900 8050 2900
 Wire Wire Line
@@ -2723,10 +2709,10 @@ Connection ~ 1800 7400
 Wire Wire Line
 	1800 7400 2050 7400
 $Comp
-L Device:D D?
+L Device:D D6
 U 1 1 64871AD3
 P 4300 3300
-F 0 "D?" V 4346 3221 50  0000 R CNN
+F 0 "D6" V 4346 3221 50  0000 R CNN
 F 1 "D" V 4255 3221 50  0000 R CNN
 F 2 "digikey-footprints:Diode_DO-35_P10mm" H 4300 3300 50  0001 C CNN
 F 3 "~" H 4300 3300 50  0001 C CNN
@@ -2734,10 +2720,10 @@ F 3 "~" H 4300 3300 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:D D?
+L Device:D D5
 U 1 1 64873A41
 P 3550 3300
-F 0 "D?" V 3596 3221 50  0000 R CNN
+F 0 "D5" V 3596 3221 50  0000 R CNN
 F 1 "D" V 3505 3221 50  0000 R CNN
 F 2 "digikey-footprints:Diode_DO-35_P10mm" H 3550 3300 50  0001 C CNN
 F 3 "~" H 3550 3300 50  0001 C CNN
@@ -2782,4 +2768,44 @@ Wire Wire Line
 Connection ~ 2800 3300
 Wire Wire Line
 	2800 3300 2800 5050
+Wire Wire Line
+	3350 1750 3350 1950
+Wire Wire Line
+	3350 2150 3600 2150
+Connection ~ 3350 1750
+Wire Wire Line
+	3600 1950 3350 1950
+Connection ~ 3350 1950
+Wire Wire Line
+	3350 1950 3350 2150
+Wire Wire Line
+	3600 1850 3450 1850
+Wire Wire Line
+	3450 1850 3450 2050
+Wire Wire Line
+	3450 2400 4100 2400
+Connection ~ 4100 2400
+Wire Wire Line
+	4100 2400 4100 2450
+Wire Wire Line
+	3600 2050 3450 2050
+Connection ~ 3450 2050
+Wire Wire Line
+	3450 2050 3450 2400
+Text GLabel 9900 1850 3    50   Input ~ 0
+GND
+Text GLabel 9900 3100 3    50   Input ~ 0
+GND
+Text GLabel 9900 5500 3    50   Input ~ 0
+GND
+Text GLabel 9900 6750 3    50   Input ~ 0
+GND
+Text GLabel 9900 8950 3    50   Input ~ 0
+GND
+Text GLabel 9900 10200 3    50   Input ~ 0
+GND
+Wire Wire Line
+	9325 2050 9325 1750
+Wire Wire Line
+	9325 1750 9900 1750
 $EndSCHEMATC

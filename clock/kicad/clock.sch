@@ -176,7 +176,7 @@ Connection ~ 1800 1800
 Wire Wire Line
 	2550 2450 2550 2600
 Wire Wire Line
-	4100 2350 4100 2450
+	4100 2350 4100 2400
 Wire Wire Line
 	3600 1650 3550 1650
 Wire Wire Line
@@ -222,10 +222,6 @@ F 3 "" H 5750 2400 50  0001 C CNN
 	1    5750 2200
 	1    0    0    -1  
 $EndComp
-NoConn ~ 3600 1850
-NoConn ~ 3600 1950
-NoConn ~ 3600 2050
-NoConn ~ 3600 2150
 NoConn ~ 2950 2200
 NoConn ~ 2950 2100
 NoConn ~ 2950 2000
@@ -399,8 +395,6 @@ F 3 "http://www.kingbright.com/attachments/file/psearch/000/00/00/KCSC02-105(Ver
 	1    10200 2700
 	1    0    0    -1  
 $EndComp
-NoConn ~ 9900 1850
-NoConn ~ 9900 3100
 $Comp
 L clock:74HC390 U8
 U 1 1 5D185C43
@@ -516,7 +510,6 @@ F 3 "http://www.kingbright.com/attachments/file/psearch/000/00/00/KCSC02-105(Ver
 	1    10200 6350
 	1    0    0    -1  
 $EndComp
-NoConn ~ 9900 5500
 Wire Wire Line
 	5150 5200 5150 4300
 Wire Wire Line
@@ -651,11 +644,7 @@ Wire Wire Line
 	6450 8550 6450 9000
 Wire Wire Line
 	6450 9000 6150 9000
-Wire Wire Line
-	6450 9150 6200 9150
-Wire Wire Line
-	6400 9250 6300 9250
-Text GLabel 5750 9600 3    50   Input ~ 0
+Text GLabel 5750 9800 3    50   Input ~ 0
 GND
 Text GLabel 5750 8400 1    50   Input ~ 0
 VCC
@@ -676,8 +665,6 @@ Wire Wire Line
 Wire Wire Line
 	6700 6800 5800 6800
 Wire Wire Line
-	5800 6800 5800 7050
-Wire Wire Line
 	6350 8350 6800 8350
 Wire Wire Line
 	6700 6800 6700 8550
@@ -687,27 +674,12 @@ Wire Wire Line
 Wire Wire Line
 	5850 7750 5850 8150
 Wire Wire Line
-	5850 8150 5000 8150
-Wire Wire Line
-	5000 8150 5000 9150
-Wire Wire Line
-	5000 9150 5300 9150
-Wire Wire Line
-	6200 9150 6200 9700
-Wire Wire Line
-	6200 9700 5300 9700
-Wire Wire Line
-	5300 9700 5300 9350
-Connection ~ 6200 9150
-Wire Wire Line
-	6200 9150 6150 9150
-NoConn ~ 6150 9350
+	5850 8150 5125 8150
 NoConn ~ 6150 9450
 Text GLabel 6800 6600 0    50   Input ~ 0
 VCC
 Text GLabel 6800 6700 0    50   Input ~ 0
 GND
-NoConn ~ 9900 6750
 Text GLabel 7100 6900 2    50   Input ~ 0
 GND
 NoConn ~ 5650 7750
@@ -742,8 +714,6 @@ Connection ~ 6150 8250
 Wire Wire Line
 	6150 8250 6600 8250
 Wire Wire Line
-	6300 9250 6300 7800
-Wire Wire Line
 	6300 7800 6400 7800
 Wire Wire Line
 	6400 7800 6400 6950
@@ -751,9 +721,6 @@ Wire Wire Line
 	6400 6950 6100 6950
 Wire Wire Line
 	6100 6950 6100 7050
-Connection ~ 6300 9250
-Wire Wire Line
-	6300 9250 6150 9250
 Text GLabel 2150 1800 3    50   Input ~ 0
 GND
 Text GLabel 5400 6950 1    50   Input ~ 0
@@ -1814,10 +1781,6 @@ Wire Wire Line
 	10650 11075 7450 11075
 Wire Wire Line
 	7450 11075 7450 11150
-Wire Wire Line
-	6400 9600 6400 9250
-Wire Wire Line
-	6450 9500 6450 9150
 Text GLabel 7600 9300 1    50   Input ~ 0
 GND
 Connection ~ 7100 9300
@@ -1861,12 +1824,6 @@ F 3 "" H 7100 9800 50  0001 C CNN
 	1    7100 9800
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	6400 9600 6800 9600
-Wire Wire Line
-	6450 9500 6800 9500
-NoConn ~ 9900 10200
-NoConn ~ 9900 8950
 Connection ~ 10650 10200
 Connection ~ 10650 10100
 Wire Wire Line
@@ -2170,10 +2127,6 @@ Wire Wire Line
 	9150 1975 9150 2050
 Wire Wire Line
 	9150 2050 9325 2050
-Wire Wire Line
-	9325 2050 9325 1750
-Wire Wire Line
-	9325 1750 9900 1750
 Wire Wire Line
 	7400 2900 8050 2900
 Wire Wire Line
@@ -2782,4 +2735,77 @@ Wire Wire Line
 Connection ~ 2800 3300
 Wire Wire Line
 	2800 3300 2800 5050
+Wire Wire Line
+	3350 1750 3350 1950
+Wire Wire Line
+	3350 2150 3600 2150
+Connection ~ 3350 1750
+Wire Wire Line
+	3600 1950 3350 1950
+Connection ~ 3350 1950
+Wire Wire Line
+	3350 1950 3350 2150
+Wire Wire Line
+	3600 1850 3450 1850
+Wire Wire Line
+	3450 1850 3450 2050
+Wire Wire Line
+	3450 2400 4100 2400
+Connection ~ 4100 2400
+Wire Wire Line
+	4100 2400 4100 2450
+Wire Wire Line
+	3600 2050 3450 2050
+Connection ~ 3450 2050
+Wire Wire Line
+	3450 2050 3450 2400
+Text GLabel 9900 1850 3    50   Input ~ 0
+GND
+Text GLabel 9900 3100 3    50   Input ~ 0
+GND
+Text GLabel 9900 5500 3    50   Input ~ 0
+GND
+Text GLabel 9900 6750 3    50   Input ~ 0
+GND
+Text GLabel 9900 8950 3    50   Input ~ 0
+GND
+Wire Wire Line
+	9325 2050 9325 1750
+Wire Wire Line
+	9325 1750 9900 1750
+Wire Wire Line
+	5300 9150 5000 9150
+Wire Wire Line
+	5125 9350 5300 9350
+Wire Wire Line
+	5125 8150 5125 9350
+Wire Wire Line
+	5800 6800 5800 7050
+NoConn ~ 6150 9150
+Wire Wire Line
+	6150 9350 6300 9350
+Wire Wire Line
+	6450 9350 6450 9600
+Wire Wire Line
+	6450 9600 6800 9600
+Wire Wire Line
+	6550 9250 6550 9500
+Wire Wire Line
+	6550 9500 6800 9500
+Wire Wire Line
+	6150 9250 6550 9250
+Wire Wire Line
+	6300 7800 6300 9350
+Connection ~ 6300 9350
+Wire Wire Line
+	6300 9350 6450 9350
+Wire Wire Line
+	5000 9150 5000 9700
+Wire Wire Line
+	5000 9700 5750 9700
+Wire Wire Line
+	5750 9600 5750 9700
+Connection ~ 5750 9700
+Wire Wire Line
+	5750 9700 5750 9800
 $EndSCHEMATC
