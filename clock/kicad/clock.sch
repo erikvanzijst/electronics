@@ -1557,17 +1557,6 @@ Wire Wire Line
 Wire Wire Line
 	3450 9450 3450 9550
 Connection ~ 3450 9450
-$Comp
-L Device:C C7
-U 1 1 5DB38DC1
-P 3800 9900
-F 0 "C7" H 3915 9946 50  0000 L CNN
-F 1 "10uF" H 3915 9855 50  0000 L CNN
-F 2 "Capacitor_THT:C_Radial_D5.0mm_H11.0mm_P2.00mm" H 3838 9750 50  0001 C CNN
-F 3 "~" H 3800 9900 50  0001 C CNN
-	1    3800 9900
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	2600 9750 2600 9450
 Connection ~ 2600 9450
@@ -2808,4 +2797,15 @@ Wire Wire Line
 Connection ~ 5750 9700
 Wire Wire Line
 	5750 9700 5750 9800
+$Comp
+L Device:CP1 C7
+U 1 1 674B0372
+P 3800 9900
+F 0 "C7" H 3915 9946 50  0000 L CNN
+F 1 "10uF" H 3915 9855 50  0000 L CNN
+F 2 "Capacitor_THT:CP_Radial_Tantal_D5.0mm_P2.50mm" H 3800 9900 50  0001 C CNN
+F 3 "~" H 3800 9900 50  0001 C CNN
+	1    3800 9900
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
