@@ -30,10 +30,10 @@ never have all input lines high. The line decoder translates 01111111 as zero
 (111 binary output), 01000000 as 1 (100 binary output), and 00000001 as 7
 (000 binary output).
 
-![](opamp_adc/schematic.png)
+![KiCad Schematic](opamp_adc/schematic.png)
 
 Components used:
 
-* 7x LM324AN Operational Amplifier -- http://www.ti.com/lit/ds/symlink/lm224.pdf
-* 1x SN74HC148 8-to-3 Line Priority Decoder -- http://www.ti.com/lit/ds/symlink/sn74hc148.pdf
+* 7x LM324AN Operational Amplifier -- [http://www.ti.com/lit/ds/symlink/lm224.pdf](http://www.ti.com/lit/ds/symlink/lm224.pdf)
+* 1x SN74HC148 8-to-3 Line Priority Decoder -- [http://www.ti.com/lit/ds/symlink/sn74hc148.pdf](http://www.ti.com/lit/ds/symlink/sn74hc148.pdf)
 * Loads of resistors
