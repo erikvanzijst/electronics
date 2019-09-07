@@ -6,8 +6,8 @@
 An exercise in turning the analog input from a potentiometer into digital form.
 
 Instead of using a specialized, off the shelf ADC, this circuit uses
-operational amplifiers to compare the voltage over the pot's wiper to 7
-pre-configured voltage levels produced by a resistor ladder.
+operational amplifiers in open-loop to compare the voltage over the pot's wiper
+to 7 pre-configured voltage levels produced by a resistor ladder.
 
 If the pot's voltage exceeds an op amp's reference voltage, its output goes
 low. The output of these 7 op amps is then fed to an 8-to-3 priority line
@@ -34,6 +34,6 @@ never have all input lines high. The line decoder translates 01111111 as zero
 
 Components used:
 
-* 7x LM324AN Operational Amplifier -- [http://www.ti.com/lit/ds/symlink/lm224.pdf](http://www.ti.com/lit/ds/symlink/lm224.pdf)
+* 2x LM324AN Quad Operational Amplifier -- [http://www.ti.com/lit/ds/symlink/lm224.pdf](http://www.ti.com/lit/ds/symlink/lm224.pdf)
 * 1x SN74HC148 8-to-3 Line Priority Decoder -- [http://www.ti.com/lit/ds/symlink/sn74hc148.pdf](http://www.ti.com/lit/ds/symlink/sn74hc148.pdf)
 * Loads of resistors
