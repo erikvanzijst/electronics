@@ -32,6 +32,12 @@ never have all input lines high. The line decoder translates 01111111 as zero
 
 ![KiCad Schematic](opamp_adc/schematic.png)
 
+Note that the resistor ladders are configured such that the variable domain is
+limited to the 1-4v range (so the pot starts at 1v and swings up to 4v), instead of
+the full 0-5v. This is because the LM324AN op amp does not offer rail-to-rail
+performance. So instead of feeding the op amps with a higher voltage power
+source, we instead shape the input values.
+
 Components used:
 
 * 2x LM324AN Quad Operational Amplifier -- [http://www.ti.com/lit/ds/symlink/lm224.pdf](http://www.ti.com/lit/ds/symlink/lm224.pdf)
