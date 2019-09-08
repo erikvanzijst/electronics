@@ -27,7 +27,7 @@ line decoder.
    
 Note that the lowest input line of the decoder is tied to ground so that we
 never have all input lines high. The line decoder translates 01111111 as zero
-(111 binary output), 01000000 as 1 (100 binary output), and 00000001 as 7
+(111 binary output), 10111111 as 1 (110 binary output), and 00000001 as 7
 (000 binary output).
 
 ![KiCad Schematic](opamp_adc/schematic.png)
