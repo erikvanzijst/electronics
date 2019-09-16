@@ -36,7 +36,7 @@ In case of a [74xx595](https://www.arduino.cc/en/tutorial/ShiftOut), the shift
 register's 8 outputs are connected the 8 row
 pins, providing the anode for the LEDs. The column pins can be connected to the
 MCU directly as output pins. Put 8 bits in the shift register and pull one of
-the column pins low so as to be current sink and one row will light up. Now
+the column pins low so as to be a current sink and one row will light up. Now
 load the data for the next row and toggle the next column. Rinse and repeat
 many times per second.
 
@@ -118,7 +118,7 @@ The clock signal is produced by another 555 timer running at 48Hz.
 
 <iframe width="650" height="700" src="https://www.youtube.com/embed/7vDrLuH4eWA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-###N.B.
+### N.B.
 
 The font used in the video is the standard 8x9 (truncated to 8x8) [Linux
 console font](https://www.zap.org.au/software/fonts/console-fonts-zap/)
