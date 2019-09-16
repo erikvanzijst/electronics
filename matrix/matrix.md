@@ -103,7 +103,7 @@ scale well, more modern EEPROMs have
 We hook up the address pins to a 15 stage ripple counter that slowly cycles
 through the entire address space and we hook up the 8 data pins to the data
 input lines of the shift registers. After loading an address and putting the
-8-bit data onto the shift register's inputs, we clock the shift and latch pins
+8-bit data onto the shift registers' inputs, we clock the shift and latch pins
 of all registers simultaneously, appending a new row of data to the display.
 
 ![](eeprom_driver_schematic.png)
