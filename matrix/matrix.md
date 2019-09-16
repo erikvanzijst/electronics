@@ -28,7 +28,8 @@ columns, it took a while figuring things out.
 
 A common way to drive bare matrix displays of this kind is to hook them up to
 a microcontroller and implement the continuous refresh cycle in software,
-painting one column at a time at high speed, typically using a shift register
+painting one column at a time at high speed, typically using a
+[shift register](https://en.wikipedia.org/wiki/Shift_register)
 as a staging area holding the pixels for the active column.
 
 In case of a [74xx595](https://www.arduino.cc/en/tutorial/ShiftOut), the shift
@@ -36,14 +37,14 @@ register's 8 outputs are connected the 8 row
 pins, providing the anode for the LEDs. The column pins can be connected to the
 MCU directly as output pins. Put 8 bits in the shift register and pull one of
 the column pins low so as to be current sink and one row will light up. Now
-load the data for the next column and toggle the next column. Rinse and repeat
+load the data for the next row and toggle the next column. Rinse and repeat
 many times per second.
 
 To offload the MCU, there are [specialized ICs](https://playground.arduino.cc/Main/LEDMatrix/)
 implementing the refresh logic in hardware.
 
 I did not want to use a microcontroller or code, but instead try to drive the
-displays directly with hardware.
+displays directly with basic logic hardware.
 
 
 ## Marquee
@@ -63,7 +64,7 @@ drains is implemented using a [555 timer chip](http://www.ti.com/lit/gpn/ne555)
 oscillating at ~400Hz, driving a [4 bit binary counter](https://assets.nexperia.com/documents/data-sheet/74HC_HCT393.pdf)
 of which we only use the lower 3 bits to repeatedly count from 0-7.  
 
-The binary counter then feeds to 3-8 line decoders that enable one shift
+The binary counter then feeds to 3-8 line decoders that activate one shift
 register and column sink at a time.
 
 ![](display_scanner_schema.png)
@@ -86,11 +87,13 @@ for the row and columns respectively.
 With this in place all we have left to do is feed the shift registers with
 data. If we do this continuously, we'll get a scrolling marquee.
 
-As we're not using a microcontroller, I chose to use a parallel EEPROM for data
-storage. EEPROMs act like non-volatile SRAMs and the older, parallel ones have
+As we're not using a microcontroller, I chose to use a parallel
+[EEPROM](https://en.wikipedia.org/wiki/EEPROM) for data
+storage. EEPROMs act like non-volatile [SRAM](https://en.wikipedia.org/wiki/Static_random-access_memory)
+and the older, parallel ones have
 a parallel address and data bus that makes them trivial to interface with.
 
-![](at28c256.jpg)
+![EEPROM IC](at28c256.jpg)
 
 The parallel address bus limits the capacity. You need a large physical chip
 with 15 address pins and 8 data pins for just 32KiB of data. As this doesn't
@@ -113,4 +116,16 @@ loading of the addresses.
 
 The clock signal is produced by another 555 timer running at 48Hz.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/7vDrLuH4eWA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="650" height="700" src="https://www.youtube.com/embed/7vDrLuH4eWA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+###N.B.
+
+The font used in the video is the standard 8x9 (truncated to 8x8) [Linux
+console font](https://www.zap.org.au/software/fonts/console-fonts-zap/)
+for VGA text displays.
+
+![linux VGA font](zap-ext-vga09.png)
+
+I wrote [2 small scripts](https://gist.github.com/erikvanzijst/50b74403c8a2465201c41968dd26081b)
+to load the text output from [psftools](https://www.seasip.info/Unix/PSF/) and
+compile any string to the binary format expected by the circuit.
