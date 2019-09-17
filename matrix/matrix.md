@@ -100,6 +100,10 @@ with 15 address pins and 8 data pins for just 32KiB of data. As this doesn't
 scale well, more modern EEPROMs have
 [serial interface protocols](https://www.rfwireless-world.com/Terminology/UART-vs-SPI-vs-I2C.html).
 
+I chose the 256 kibi-bit (32KiB)
+[AT28C256](http://ww1.microchip.com/downloads/en/DeviceDoc/doc0006.pdf)
+as it's still readily available.
+
 We hook up the address pins to a 15 stage ripple counter that slowly cycles
 through the entire address space and we hook up the 8 data pins to the data
 input lines of the shift registers. After loading an address and putting the
@@ -160,3 +164,6 @@ for VGA text displays.
 I wrote [2 small scripts](https://gist.github.com/erikvanzijst/50b74403c8a2465201c41968dd26081b)
 to load the text output from [psftools](https://www.seasip.info/Unix/PSF/) and
 compile any string to the binary format expected by the circuit.
+
+With each character taking up 8 bytes, the total capacity of the 32KiB EEPROM
+is 4096 characters.
