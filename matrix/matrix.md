@@ -118,7 +118,38 @@ The clock signal is produced by another 555 timer running at 48Hz.
 
 <iframe width="650" height="700" src="https://www.youtube.com/embed/7vDrLuH4eWA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-### N.B.
+### Data Format
+
+Each byte in the EEPROM corresponds directly to a full row of pixels and since
+we want the marquee to scroll from right to left, we rotate the display such
+that each shift register's contents align with a horizontal row of pixels,
+with the register's first output pin connected to the right-most pixel.
+
+This way each byte in the EEPROM appears as a vertical line of 8 pixels on the
+right side of the display, shifting the existing data one position to the left.
+
+To encode an 8x8 picture, we slice it vertically, each byte going from top to
+bottom.
+
+    --------
+    --------
+    -####---
+    ##--##--
+    ######--
+    ##------
+    -####---
+    --------
+
+For instance, the letter "e" gets encoded as
+
+    00011100    // first column
+    00111110    // second column
+    00101010    // ...
+    00101010
+    00111010
+    00011000
+    00000000
+    00000000
 
 The font used in the video is the standard 8x9 (truncated to 8x8) [Linux
 console font](https://www.zap.org.au/software/fonts/console-fonts-zap/)
