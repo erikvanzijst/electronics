@@ -41,5 +41,5 @@ source, we instead shape the input values.
 Components used:
 
 * 2x LM324AN Quad Operational Amplifier -- [http://www.ti.com/lit/ds/symlink/lm224.pdf](http://www.ti.com/lit/ds/symlink/lm224.pdf)
-* 1x SN74HC148 8-to-3 Line Priority Decoder -- [http://www.ti.com/lit/ds/symlink/sn74hc148.pdf](http://www.ti.com/lit/ds/symlink/sn74hc148.pdf)
+* 1x SN74HC148 8-to-3 Line Priority Encoder -- [http://www.ti.com/lit/ds/symlink/sn74hc148.pdf](http://www.ti.com/lit/ds/symlink/sn74hc148.pdf)
 * Loads of resistors

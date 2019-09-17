@@ -60,3 +60,28 @@ a [74HC08](https://assets.nexperia.com/documents/data-sheet/74HC_HCT08.pdf)
 (quad AND gate) and
 [74HC32](https://assets.nexperia.com/documents/data-sheet/74HC_HCT32.pdf)
 (quad OR gate).
+
+
+## Input Control
+
+To move the spaceship pixel up an down I decided to use a potentiometer for the
+player to turn up and down, instead of push buttons, even though the analog
+nature of a pot and lack of microcrontroller means more circuitry.
+
+I decided to reuse the [custom Analog to Digital Converter](../opamp.md)
+circuit I had built earlier. It uses the pot as a voltage divider and a series
+of op amps to compare the voltage to 7 discrete steps. This is then encoded
+into a 3 bit binary number indicating the horizontal row the player is on.
+
+![](adc.png)
+
+As the display scanning and refreshing logic repeatedly cycles up and down the
+display, painting each line, the player's 3-bit location is compared to the
+display counter. When the player's row is painted, the two 3-bit values will
+match and we bring the second line to the OR gate high.
+
+![](adc_schematic.png)
+
+For this comparision we're using a
+[74HC688](https://assets.nexperia.com/documents/data-sheet/74HC688.pdf) 8-bit
+magnitude comparator (though we only use 3 of its bits).
