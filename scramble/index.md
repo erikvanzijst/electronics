@@ -17,7 +17,7 @@ the 1981 Konami video game
 
 ![1981 Konami Scramble](konami_scramble.gif)
 
-With a heavy dose of imagination, a 8x8 two-color display with a single
+With a heavy dose of imagination, an 8x8 two-color display with a single
 interactive pixel for a spaceship might be a bit like the horizontally
 scrolling game Scramble?
 
@@ -70,8 +70,8 @@ nature of a pot and lack of microcrontroller means more circuitry.
 
 I decided to reuse the [custom Analog to Digital Converter](../opamp.md)
 circuit I had built earlier. It uses the pot as a voltage divider and a series
-of op amps to compare the voltage to 7 discrete steps. This is then encoded
-into a 3 bit binary number indicating the horizontal row the player is on.
+of op amps to compare the voltage to 7 discrete levels. This is then encoded
+into a 3-bit binary number indicating the horizontal row the player is on.
 
 ![Custom ADC](adc.png)
 
@@ -88,7 +88,7 @@ magnitude comparator (though we only use 3 of its bits).
 
 With this in place, we now have a vertically movable pixel on top of whatever
 content scrolls over the display. The circuit even detects when you run into
-the environment.
+the environment (although it doesn't respond yet).
 
 
 ## Power On Reset
@@ -107,7 +107,7 @@ a crash.
 To avoid this we need to make sure all shift registers boot up empty and since
 the only way to clear a 595 shift register is to bring its `SR_CLR` line low and
 then clocking its latch input `SRCLK`, we need to build a little multi-step
-circuitry that runs only on startup.
+circuit that runs only on startup.
 
 Not sure how this type of thing is typically done, I decided to add a
 resistor-capacitor that starts charging on startup, rising its voltage until it
