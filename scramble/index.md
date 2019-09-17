@@ -66,7 +66,7 @@ a [74HC08](https://assets.nexperia.com/documents/data-sheet/74HC_HCT08.pdf)
 
 To move the spaceship pixel up an down I decided to use a potentiometer for the
 player to turn up and down, instead of push buttons, even though the analog
-nature of a pot and lack of microcrontroller means more circuitry.
+nature of a pot and lack of microcontroller means more circuitry.
 
 I decided to reuse the [custom Analog to Digital Converter](../opamp.md)
 circuit I had built earlier. It uses the pot as a voltage divider and a series
@@ -141,10 +141,40 @@ registers' `SRCLK` inputs during the marquee cycle.
 
 ![](por_clk.png)
 
+Lastly we also need to reset the address counters to 0 on startup. The
+[74HC191](http://www.ti.com/lit/ds/symlink/sn54hc191.pdf) has a LOAD line (`Pl`
+in the schematic) to instantly set the internal state to the values on the 4
+input lines P0-P3 on which we use pull-down resistors. The `Pl` pin is
+connected to `POR_5`.
+
+
 
 ## Die and Restart
 
-The game now starts up cleanly with an empty screen as the parcourse scrolls in
-from the right and we need a mechanism to freeze the game when you collide with
-the environment.
+The game now starts up cleanly with an empty screen as the parcourse starts
+scrolling in from the right and we need a mechanism to freeze the game when you
+collide with the environment.
+
+To be able to control the scrolling we add a
+[74HC74](https://assets.nexperia.com/documents/data-sheet/74HC_HCT74.pdf)
+flip-flop we can toggle between scrolling and stopped. This state can be used
+as input on the marquee's address counters' Count Enable `CE` pin.
+
+We want to make sure the flip-flop comes up in counting mode at startup to
+start off the game scrolling and so we connect its data input line to VCC and
+its clock line to POR_5 so in the event the flip-flop comes up in LOW state,
+it will toggle automatically to HIGH at the 7ms mark.
+
+![Game State](game_flipflop.png)
+
+Next we connect the inverted collision signal from earlier to the flip-flop's
+reset `R` line. When a collision occurs, `R` will go from HIGH to LOW,
+toggling the state to off, bringing the counters' Count Enable `Ce` line HIGH,
+stopping all scrolling motion.
+
+To restart the game after it stops, we extend the Power On Reset circuit by
+adding a button to discharge the capacitors, re-initiating the state at
+startup.
+
+![Restart Switch](restart_switch.png)
 
