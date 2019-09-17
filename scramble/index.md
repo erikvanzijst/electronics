@@ -105,7 +105,7 @@ our game as random data might spawn on the player's location, instantly causing
 a crash.
 
 To avoid this we need to make sure all shift registers boot up empty and since
-the only way to clear a 595 shift register is to bring its `SR_CLR` line low and
+the only way to clear a 595 shift register is to bring its `SRCLR` line low and
 then clocking its latch input `SRCLK`, we need to build a little multi-step
 circuit that runs only on startup.
 
@@ -113,9 +113,38 @@ Not sure how this type of thing is typically done, I decided to add a
 resistor-capacitor that starts charging on startup, rising its voltage until it
 triggers a
 [schmitt-trigger inverter](https://assets.nexperia.com/documents/data-sheet/74HC_HCT14.pdf)
-to flip, providing a digital signal delayed by about 5 milliseconds after
+to flip, providing a digital signal delayed by about 2.5 milliseconds after
 startup.
 
-![](por_schematic.png)
+![Power on Reset](por_schematic.png)
 
-By daisy chaining several of these 
+By daisy chaining several of these we get 5 output lines that exhibit the
+following delayed characteristics:
+
+![Power on Reset Logic](por_pulseview.png)
+
+Note that the voltage on the first line rises gradually instead of sharply,
+which is not a digital signal, confusing the logic analyser.
+
+We connect the shift registers' `SRCLR` line to line `POR_5` so we have about
+7ms after startup to deliver a pulse to `SRCLK` and clear out the register's
+initial random data.
+
+We also connect `POR_5` to the display driver's line decoders' `G1` pins to
+disable their outputs during these initial 6ms. This way none of the shift
+registers or display cathode drains activate, keeping the display dark.
+
+We AND `POR_3` and `POR_4` to create a single low-high-low pulse from ~2.5 to
+~7ms after startup to flush the contents.
+This one-time pulse can be OR'd with the regular clock signal driving the shift
+registers' `SRCLK` inputs during the marquee cycle.
+
+![](por_clk.png)
+
+
+## Die and Restart
+
+The game now starts up cleanly with an empty screen as the parcourse scrolls in
+from the right and we need a mechanism to freeze the game when you collide with
+the environment.
+
