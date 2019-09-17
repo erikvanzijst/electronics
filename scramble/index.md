@@ -73,15 +73,49 @@ circuit I had built earlier. It uses the pot as a voltage divider and a series
 of op amps to compare the voltage to 7 discrete steps. This is then encoded
 into a 3 bit binary number indicating the horizontal row the player is on.
 
-![](adc.png)
+![Custom ADC](adc.png)
 
 As the display scanning and refreshing logic repeatedly cycles up and down the
 display, painting each line, the player's 3-bit location is compared to the
 display counter. When the player's row is painted, the two 3-bit values will
 match and we bring the second line to the OR gate high.
 
-![](adc_schematic.png)
+![ADC Schematic](adc_schematic.png)
 
 For this comparision we're using a
 [74HC688](https://assets.nexperia.com/documents/data-sheet/74HC688.pdf) 8-bit
 magnitude comparator (though we only use 3 of its bits).
+
+With this in place, we now have a vertically movable pixel on top of whatever
+content scrolls over the display. The circuit even detects when you run into
+the environment.
+
+
+## Power On Reset
+
+When an electronic circuit that maintains state, like a
+[flip-flop](https://en.wikipedia.org/wiki/Flip-flop_%28electronics%29), is
+powered on, it's initial state (on or off) is generally unpredictable. This is
+also the case for the storage flip-flops in our shift registers. This means
+that on startup the display will be filled with random data which then
+gradually scrolls off screen as new data is latched.
+
+This was annoying with the earlier marquee circuit, but is very problematic for
+our game as random data might spawn on the player's location, instantly causing
+a crash.
+
+To avoid this we need to make sure all shift registers boot up empty and since
+the only way to clear a 595 shift register is to bring its `SR_CLR` line low and
+then clocking its latch input `SRCLK`, we need to build a little multi-step
+circuitry that runs only on startup.
+
+Not sure how this type of thing is typically done, I decided to add a
+resistor-capacitor that starts charging on startup, rising its voltage until it
+triggers a
+[schmitt-trigger inverter](https://assets.nexperia.com/documents/data-sheet/74HC_HCT14.pdf)
+to flip, providing a digital signal delayed by about 5 milliseconds after
+startup.
+
+![](por_schematic.png)
+
+By daisy chaining several of these 
