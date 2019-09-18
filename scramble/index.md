@@ -5,7 +5,7 @@ interesting to see if it could be expanded upon with some interactive elements
 to turn it into a (very simple!) game.
 
 Could we fly and navigate a pixel through a scrolling field of obstacles in the
-style of early games video?
+style of early video games?
 
 ![1982 Atari River Raid](atari_riverraid.jpg)
 
