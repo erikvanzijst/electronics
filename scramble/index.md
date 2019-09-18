@@ -102,7 +102,7 @@ gradually scrolls off screen as new data is latched.
 
 This was annoying with the earlier marquee circuit, but is very problematic for
 our game as random data might spawn on the player's location, instantly causing
-a crash.
+a collision.
 
 To avoid this we need to make sure all shift registers boot up empty and since
 the only way to clear a 595 shift register is to bring its `SRCLR` line low and
