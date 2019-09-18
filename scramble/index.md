@@ -173,7 +173,18 @@ toggling the state to off, bringing the counters' Count Enable `Ce` line HIGH,
 stopping all scrolling motion.
 
 To restart the game after it stops, we extend the Power On Reset circuit by
-adding a button to discharge the capacitors, re-initiating the state at
+adding a button to discharge the capacitors, re-initiating the conditions at
 startup.
 
 ![Restart Switch](restart_switch.png)
+
+That brought the project to a point where I though it was complete enough as a
+first version.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/JxsSOqSgFzE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+## Resources
+
+The full KiCad schematic can be found at
+[https://github.com/erikvanzijst/scramble](https://github.com/erikvanzijst/scramble)
