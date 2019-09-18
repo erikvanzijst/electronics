@@ -196,7 +196,7 @@ resolution of my 25MHz logic analyzer) the output is high, triggering the game
 state flip-flop.
 
 What's actually happening here is that during the row transition the signal
-from shift register arrives slightly ahead of the signal from the ADC (which
+from the shift register arrives slightly ahead of the signal from the ADC (which
 traverses a longer path through more ICs) and so for a few nanoseconds, both
 AND inputs are high. A literal race condition.
 
