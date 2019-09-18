@@ -192,8 +192,8 @@ row. At this point the (next) shift register output line goes high, while the
 player's row goes low (we're not visible on this line) simultaneously.
 
 There should not be pulse on the AND gate's output, but for ~40ns (the highest
-resolution of my 24MHz logic analyzer) the output is high, triggering the game
-state flip-flop.
+resolution of my [24MHz logic analyzer](https://www.sparkfun.com/products/15033))
+the output is high, triggering the game state flip-flop.
 
 What's actually happening here is that during the row transition the signal
 from the shift register arrives slightly ahead of the signal from the ADC (which
