@@ -219,7 +219,7 @@ startup.
 
 ![Restart Switch](restart_switch.png)
 
-That brought the project to a point where I though it was complete enough as a
+That brought the project to a point where I thought it was complete enough as a
 first version.
 
 ![](breadboard.jpg)
