@@ -177,4 +177,3 @@ adding a button to discharge the capacitors, re-initiating the state at
 startup.
 
 ![Restart Switch](restart_switch.png)
-
