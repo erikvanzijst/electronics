@@ -181,7 +181,7 @@ startup.
 That brought the project to a point where I though it was complete enough as a
 first version.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/JxsSOqSgFzE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="700" height="394" src="https://www.youtube.com/embed/JxsSOqSgFzE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 
 ## Resources
