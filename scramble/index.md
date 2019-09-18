@@ -149,7 +149,7 @@ connected to `POR_5`.
 
 
 
-## Die and Restart
+## Collisions
 
 The game now starts up cleanly with an empty screen as the parcourse starts
 scrolling in from the right and we need a mechanism to freeze the game when you
@@ -171,6 +171,47 @@ Next we connect the inverted collision signal from earlier to the flip-flop's
 reset `R` line. When a collision occurs, `R` will go from HIGH to LOW,
 toggling the state to off, bringing the counters' Count Enable `Ce` line HIGH,
 stopping all scrolling motion.
+
+
+## Race Conditions
+
+When testing this collision logic, I kept dying whenever there was a wall
+directly below me. This shouldn't happen as I never actually moved into the
+row below.
+
+With the logic analyzer connected to the AND gate that compares the draw signal
+from the ADC input circuit against the pixel value from shift register of the
+active row, an odd signal appeared.
+
+![](collision_pulseview1.jpg)
+
+First the player's row gets drawn during which line `A` goes high. This row does
+not have scenery on the last pixel, represented by a low signal on the output
+line of the shift register `B`. Then the display switches to paint the next
+row. At this point the (next) shift register output line goes high, while the
+player's row goes low (we're not visible on this line) simultaneously.
+
+There should not be pulse on the AND gate's output, but for ~40ns (the highest
+resolution of my 25MHz logic analyzer) the output is high, triggering the game
+state flip-flop.
+
+What's actually happening here is that during the row transition the signal
+from shift register arrives slightly ahead of the signal from the ADC (which
+traverses a longer path through more ICs) and so for a few nanoseconds, both
+AND inputs are high. A literal race condition.
+
+The crude solution I came up with was to put a simple RC low pass filter on the
+AND gate's output to suppress pulses shorter than 2 microseconds.
+
+![](lowpass_collision_filter.png)
+
+This got rid of the race condition and stabilized the game play. The ghost
+pulse still appeared on the AND gate, but didn't propagate through the filter.
+
+![](collision_pulseview2.jpg)
+
+
+## Restarting
 
 To restart the game after it stops, we extend the Power On Reset circuit by
 adding a button to discharge the capacitors, re-initiating the conditions at
