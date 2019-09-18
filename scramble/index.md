@@ -131,7 +131,7 @@ We connect the shift registers' `SRCLR` line to line `POR_5` so we have about
 initial random data.
 
 We also connect `POR_5` to the display driver's line decoders' `G1` pins to
-disable their outputs during these initial 6ms. This way none of the shift
+disable their outputs during these initial 7ms. This way none of the shift
 registers or display cathode drains activate, keeping the display dark.
 
 We AND `POR_3` and `POR_4` to create a single low-high-low pulse from ~2.5 to
@@ -192,7 +192,7 @@ row. At this point the (next) shift register output line goes high, while the
 player's row goes low (we're not visible on this line) simultaneously.
 
 There should not be pulse on the AND gate's output, but for ~40ns (the highest
-resolution of my 25MHz logic analyzer) the output is high, triggering the game
+resolution of my 24MHz logic analyzer) the output is high, triggering the game
 state flip-flop.
 
 What's actually happening here is that during the row transition the signal
