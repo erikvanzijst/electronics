@@ -238,8 +238,8 @@ next time I could change the footprints to have longer exposed pads.
 
 ## Final Board and Resources
 
-The KiCad project as well as the serial protocol description and code for the
-Arduino and Python CLI can be found on
+The KiCad project as well as the [serial protocol](https://raw.githubusercontent.com/erikvanzijst/eeprom/master/protocol.txt)
+description and code for the Arduino and Python CLI can be found on
 [here on GitHub](https://github.com/erikvanzijst/eeprom).
 
 ![](board1.jpg)
