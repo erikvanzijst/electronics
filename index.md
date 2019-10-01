@@ -6,5 +6,5 @@ A collection of hobby projects.
 * [Digital Quartz Clock](clock/clock.md)
 * [Analog to Digital Converter](opamp.md)
 * [Marquee on Matrix Displays without Microcontroller](matrix/matrix.md)
-* [Homemade EEPROM Programmer](eeprom/eeprom.md)
 * [Scramble: Interactive Scrolling Game](scramble/index.md)
+* [EEPROM Programmer Board for Arduino](eeprom/eeprom.md)
