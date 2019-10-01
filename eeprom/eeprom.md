@@ -169,7 +169,78 @@ Address supports hex (0xFF) and octal (0o7) notation.
 ## Amazon
 
 As parallel EEPROMs are somewhat expensive, I thought it would be a good idea
-to order 
+to order from a
+[Chinese seller](https://www.amazon.com/sp?_encoding=UTF8&seller=A16AIX8W4ITW1M)
+claiming to have genuine, brand new Atmel AT28C256 chips for a fifth of US
+retail price. Even if one were defective, I'd still have 4 left.
+
+![](amazon_order.png)
+
+Don't.
+
+All 5 chips already contained data (new chips come empty as per the datasheet).
+Two of them had the software write protection enabled (new chips never have
+that as your first action will be to write to them). Two others exhibited
+corruption issues where specific addresses would fail to hold their data.
+
+Still, the seller maintained the product was brand new and not at all pulled
+from old computer equipment.
+
+```text
+$ file eeprom2.bin 
+eeprom2.bin: PDP-11 demand-paged pure executable
+```
 
 
-## ZIF Socket
+## PCB
+
+With the breadboard circuit, Arduino code and Python CLI interface working I
+decided to try and create a custom PCB in [KiCad](http://www.kicad-pcb.org/)
+that would slot onto the Arduino as a
+[Shield](https://learn.sparkfun.com/tutorials/arduino-shields/all) extension
+board.
+
+![](pcb_new.png)
+
+To gain some experience hand-soldering surface mount devices, I picked SMT
+packages for the shift registers and decoupling capacitors.
+
+The ZIF socket is a 40 pin device I had lying around. Since the AT28C256 is a
+28-DIP, I just left the 12 left-most pins unconnected. It's a low budget
+project.
+
+When I went to upload the Gerber files to [OshPark](https://oshpark.com) for
+fabrication I noticed their "[After Dark](https://docs.oshpark.com/services/afterdark/)"
+option that uses a black FR4 substrate,
+with transparent soldermask that makes the copper traces pop against a black
+background.
+
+Unfortunately I made this choice after I already designed and
+uploaded the board and failed to realize I should have removed the ground plate
+from the front of the board for the visual effect to work.
+
+<blockquote class="twitter-tweet">
+<p lang="en" dir="ltr">Beginner&#39;s mistake on my part.<br><br>
+If you&#39;re gonna go for maximum &quot;After Dark&quot; effect (and you 
+should, cause it&#39;s awesome), don&#39;t do a ground pour.
+<a href="https://twitter.com/oshpark?ref_src=twsrc%5Etfw">@oshpark</a> 
+<a href="https://twitter.com/hashtag/AfterDark?src=hash&amp;ref_src=twsrc%5Etfw">#AfterDark</a>
+<a href="https://t.co/L0HSFzPOCa">pic.twitter.com/L0HSFzPOCa</a>
+</p>&mdash; Erik van Zijst (@erikvanzijst)
+<a href="https://twitter.com/erikvanzijst/status/1177700165064376320?ref_src=twsrc%5Etfw">September 27, 2019</a>
+</blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+The board still works fine either way and provided good SMT practice although
+next time I could change the footprints to have longer exposed pads.
+
+![](SMT.jpg)
+
+## Final Board
+
+![](board1.jpg)
+![](board2.jpg)
+![](board3.jpg)
+![](board4.jpg)
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/HwUqPn2EaRc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
