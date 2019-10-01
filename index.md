@@ -7,4 +7,4 @@ A collection of hobby projects.
 * [Analog to Digital Converter](opamp.md)
 * [Marquee on Matrix Displays without Microcontroller](matrix/matrix.md)
 * [Scramble: Interactive Scrolling Game](scramble/index.md)
-* [EEPROM Programmer Board for Arduino](eeprom/eeprom.md)
+* [EEPROM Programmer Board for Arduino](eeprom/)
