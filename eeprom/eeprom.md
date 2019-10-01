@@ -7,7 +7,7 @@ microcontroller. Yet, I needed some sort of persistent data storage
 that was easy to access on a breadboard with just basic logic components.
 
 I decided to try and use old EEPROMs for this. In contrast to most newer
-EEPROMs they have parallel input and output pins for address and data making
+EEPROMs they have parallel input and output pins for address and data, making
 it trivial to read from.
 
 However, since parallel I/O requires lots of pins,
@@ -28,7 +28,7 @@ bytes, or 256 [Kibibit](https://en.wikipedia.org/wiki/Kibibit).
 
 ## Programming
 
-To load data you need an EEPROM programmer and like the chips, these have
+To load data you need an EEPROM programmer and like the chips, these devices have
 become somewhat rare and expensive. Hence the project to build one ourselves.
 
 The easiest approach is probably to use a microcontroller to bridge between
@@ -55,7 +55,7 @@ register control lines and an activity LED.
 
 ## Reading
 
-To read data is just a matter of putting a 15 bit address on the address pins
+Reading data is just a matter of putting a 15 bit address on the address pins
 and then reading the byte that appears on the I/O pins. To do this, we write
 the address out to pin `A4` one bit at a time. Pin `A4` is connected to the first
 shift register's data line (`SER` in the schematic).
@@ -100,8 +100,9 @@ sequence.
 
 ## Arduino Code and Python Interface
 
-To communicate with the Arduino interactively, we defined a simple
-bidirectional, command-based protocol for use over the serial-to-USB interface.
+To communicate with the Arduino interactively, we defined a [simple
+bidirectional, command-based protocol](https://raw.githubusercontent.com/erikvanzijst/eeprom/master/protocol.txt)
+for use over the serial-to-USB interface.
 
 On the computer we run a Python script that sends commands to the Arduino which
 responds by either reading or writing data.
@@ -219,18 +220,7 @@ Unfortunately I made this choice after I already designed and
 uploaded the board and failed to realize I should have removed the ground plate
 from the front of the board for the visual effect to work.
 
-<blockquote class="twitter-tweet">
-<p lang="en" dir="ltr">Beginner&#39;s mistake on my part.<br><br>
-If you&#39;re gonna go for maximum &quot;After Dark&quot; effect (and you 
-should, cause it&#39;s awesome), don&#39;t do a ground pour.
-<a href="https://twitter.com/oshpark?ref_src=twsrc%5Etfw">@oshpark</a> 
-<a href="https://twitter.com/hashtag/AfterDark?src=hash&amp;ref_src=twsrc%5Etfw">#AfterDark</a>
-<a href="https://t.co/L0HSFzPOCa">pic.twitter.com/L0HSFzPOCa</a>
-</p>&mdash; Erik van Zijst (@erikvanzijst)
-<a href="https://twitter.com/erikvanzijst/status/1177700165064376320?ref_src=twsrc%5Etfw">September 27, 2019</a>
-</blockquote>
-<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Beginner&#39;s mistake on my part.<br><br>If you&#39;re gonna go for maximum &quot;After Dark&quot; effect (and you should, cause it&#39;s awesome), don&#39;t do a ground pour.<a href="https://twitter.com/oshpark?ref_src=twsrc%5Etfw">@oshpark</a> <a href="https://twitter.com/hashtag/AfterDark?src=hash&amp;ref_src=twsrc%5Etfw">#AfterDark</a> <a href="https://t.co/L0HSFzPOCa">pic.twitter.com/L0HSFzPOCa</a></p>&mdash; Erik van Zijst (@erikvanzijst) <a href="https://twitter.com/erikvanzijst/status/1177700165064376320?ref_src=twsrc%5Etfw">September 27, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 The board still works fine either way and provided good SMT practice although
 next time I could change the footprints to have longer exposed pads.
 
