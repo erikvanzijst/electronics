@@ -236,7 +236,11 @@ next time I could change the footprints to have longer exposed pads.
 
 ![](SMT.jpg)
 
-## Final Board
+## Final Board and Resources
+
+The KiCad project as well as the serial protocol description and code for the
+Arduino and Python CLI can be found on
+[here on GitHub](https://github.com/erikvanzijst/eeprom).
 
 ![](board1.jpg)
 ![](board2.jpg)
